@@ -111,4 +111,3 @@ Here’s how you can start:
 Technical Head – IEEE IGDTUW
 ---
 
-Just tell me!
