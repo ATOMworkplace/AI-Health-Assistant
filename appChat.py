@@ -10,6 +10,10 @@ from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import SGD
 import asyncio
 
+from mood_selector import mood_selector
+import streamlit as st
+
+
 import nltk
 nltk.data.path.append("./nltk_data")
 
@@ -142,6 +146,14 @@ async def main():
     st.set_page_config(page_title="AI Health Assistance", page_icon="🤖", layout="wide")
     model, words, classes, data = initialize_model_and_data()
 
+    if "mood_selected" not in st.session_state:
+        mood_selector()
+        st.stop()
+
+
+    
+
+
     # Custom style
     st.markdown("""
         <style>
@@ -174,8 +186,20 @@ async def main():
             font-weight: 600;
             border-radius: 10px;
         }
+        button[kind="secondary"] {
+    border-radius: 15px !important;
+    font-size: 20px !important;
+    padding: 15px !important;
+}
+button {
+    height: 90px;
+    width: 110px;
+    font-size: 28px;
+    text-align: center;
+}
         </style>
     """, unsafe_allow_html=True)
+    
 
     st.markdown("""
     <div class="title-box">
