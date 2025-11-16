@@ -16,6 +16,10 @@ import streamlit as st
 import nltk
 nltk.data.path.append("./nltk_data")
 
+from sentiment_model import SentimentModel
+sent_model = SentimentModel()
+
+
 @st.cache_data(show_spinner=False)
 def simple_tokenize(text):
     if not text or not isinstance(text, str):
@@ -46,6 +50,8 @@ def load_chat_history():
 @st.cache_data(show_spinner=False)
 def save_chat_history(messages):
     file_path = 'chat_history.json'
+    sentiment = sent_model.get_sentiment(messages)
+
     try:
         with open(file_path, 'w') as file:
             json.dump(messages, file)
