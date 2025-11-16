@@ -10,8 +10,6 @@ from tensorflow.keras.optimizers import SGD
 import asyncio
 
 from mood_selector import mood_selector
-import streamlit as st
-
 
 import nltk
 nltk.data.path.append("./nltk_data")
@@ -473,6 +471,31 @@ async def main():
             st.markdown(message["content"])
 
     if prompt := st.chat_input("What's on your mind?"):
+        # Safety check ....
+        if safety.is_unsafe(prompt):
+            crisis_msg = (
+                "I’m really sorry you're feeling this way. You're not alone. "
+                "Please reach out to your nearest mental health helpline or "
+                "a trusted person immediately. You matter and help is available."
+            )
+        
+        # Show the user's message
+        st.session_state.messages.append({"role": "user", "content": prompt})
+        with st.chat_message("user"):
+            st.markdown(prompt)
+
+        # Show the crisis response
+        with st.chat_message("assistant"):
+            st.markdown(crisis_msg)
+
+        st.session_state.messages.append({"role": "assistant", "content": crisis_msg})
+
+        # Save and STOP further handling
+        save_chat_history(st.session_state.messages)
+        return
+    
+        # Safety check ends ....
+
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
             st.markdown(prompt)
