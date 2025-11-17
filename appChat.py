@@ -216,6 +216,14 @@ async def main():
 
         save_chat_history(st.session_state.messages)
 
+    # ---- Clear Chat Button Below Input Box ----
+    st.write("")
+    if st.button("🗑️ Clear Chat"):
+        st.session_state.messages = []
+        save_chat_history([])   # Reset chat_history.json
+        st.rerun()
+
+
     st.markdown("""
         <hr style="margin-top: 3em; margin-bottom: 1em;">
         <div style="font-size: 0.85rem; color: gray;">
