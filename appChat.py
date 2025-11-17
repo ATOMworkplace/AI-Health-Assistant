@@ -38,12 +38,20 @@ def simple_lemmatize(word):
 @st.cache_data(show_spinner=False)
 def load_chat_history():
     file_path = 'chat_history.json'
+    
     if os.path.exists(file_path):
         try:
-            with open(file_path, 'r') as file:
-                return json.load(file)
+            with open(file_path, 'r') as f:
+                return json.load(f)
         except json.JSONDecodeError:
-            st.warning("Chat history file is corrupted. Starting with an empty history.")
+            # If the file is corrupted, reset it
+            with open(file_path, 'w') as f:
+                json.dump([], f)
+            
+            # Display warning in the UI
+            st.warning("⚠️ Chat history was corrupted and has been reset.")
+            return []
+            
     return []
 
 def save_chat_history(messages):
@@ -174,7 +182,13 @@ async def main():
         if theme_option != st.session_state.theme:
             st.session_state.theme = theme_option
             st.rerun()
-        
+        chat_json = json.dumps(st.session_state.messages, indent=4)
+        st.download_button(
+            label="📥 Download Chat History",
+            data=chat_json,
+            file_name="chat_history.json",
+            mime="application/json",
+        )
         if st.button("Start a New Chat"):
             st.session_state.messages = []
             save_chat_history([])
