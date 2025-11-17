@@ -429,7 +429,13 @@ async def main():
         if theme_option != st.session_state.theme:
             st.session_state.theme = theme_option
             st.rerun()
-        
+        chat_json = json.dumps(st.session_state.messages, indent=4)
+        st.download_button(
+            label="📥 Download Chat History",
+            data=chat_json,
+            file_name="chat_history.json",
+            mime="application/json",
+        )
         if st.button("Start a New Chat"):
             st.session_state.messages = []
             save_chat_history(st.session_state.messages)
