@@ -194,196 +194,186 @@
                 "I want to do things but I cannot start",
                 "I cannot get anything done",
                 "I am stuck even though I know what to do",
-                "Everything feels impossible to start"
+                "Everything feels impossible to start",
+                "I want to do it but I can’t start",
+                "I am just stuck",
+                "I cant get out of bed",
+                "Even simple tasks feel impossible",
+                "Why cant I just do the thing?"
             ],
             "responses": [
                 "That can be really frustrating. You are not lazy — this is a real challenge many face.",
                 "How about we break it down into a small step? What is one tiny thing you could do?",
-                "You are not alone. It might help to talk through what is holding you back."
+                "You are not alone. It might help to talk through what is holding you back.",
+                "It is okay. Starting can be the hardest part. Can we break it down together?",
+                "You are not lazy — your brain is just wired differently. One step at a time.",
+                "Maybe start with something super small. What is one tiny thing you could do right now?"
             ]
         },
         {
             "tag": "sensory-overload",
             "patterns": [
-              "Everything feels too loud",
-              "I am overwhelmed by noise",
-              "Too many lights, I cannot focus",
-              "Sensory overload",
-              "My senses are overwhelmed"
+                "Everything feels too loud",
+                "I am overwhelmed by noise",
+                "Too many lights, I cannot focus",
+                "Sensory overload",
+                "My senses are overwhelmed"
             ],
             "responses": [
-              "That sounds really overwhelming. Would you like to take a break or do a calming activity?",
-              "I am here for you. Try finding a quiet, dimly lit space for a moment.",
-              "It is okay to feel overstimulated. Let us breathe together slowly for a few seconds."
+                "That sounds really overwhelming. Would you like to take a break or do a calming activity?",
+                "I am here for you. Try finding a quiet, dimly lit space for a moment.",
+                "It is okay to feel overstimulated. Let us breathe together slowly for a few seconds."
             ]
-          },
-          {
+        },
+        {
             "tag": "social-anxiety",
             "patterns": [
-              "I do not know how to talk to people",
-              "I find socializing really hard",
-              "I always say the wrong thing",
-              "I do not like talking in groups",
-              "I feel awkward around others"
+                "I do not know how to talk to people",
+                "I find socializing really hard",
+                "I always say the wrong thing",
+                "I do not like talking in groups",
+                "I feel awkward around others"
             ],
             "responses": [
-              "Social situations can be tricky. You are not alone in feeling this way.",
-              "It is okay to take your time when socializing. Just being yourself is enough.",
-              "Would you like some tips on handling social situations?"
+                "Social situations can be tricky. You are not alone in feeling this way.",
+                "It is okay to take your time when socializing. Just being yourself is enough.",
+                "Would you like some tips on handling social situations?"
             ]
-          },
-          {
+        },
+        {
             "tag": "stimming",
             "patterns": [
-              "I keep fidgeting",
-              "I flap my hands when I am stressed",
-              "I rock back and forth to calm down",
-              "I stim a lot",
-              "I feel better when I stim"
+                "I keep fidgeting",
+                "I flap my hands when I am stressed",
+                "I rock back and forth to calm down",
+                "I stim a lot",
+                "I feel better when I stim"
             ],
             "responses": [
-              "Stimming is a healthy way to self-regulate. Do what feels good for you.",
-              "It is perfectly okay to stim — it is a part of how you process your emotions.",
-              "That is a valid and natural coping mechanism. I am glad it helps."
+                "Stimming is a healthy way to self-regulate. Do what feels good for you.",
+                "It is perfectly okay to stim — it is a part of how you process your emotions.",
+                "That is a valid and natural coping mechanism. I am glad it helps."
             ]
-          },
-          {
+        },
+        {
             "tag": "hyperfocus",
             "patterns": [
-              "I cannot stop thinking about my favorite topic",
-              "I am obsessed with my special interest",
-              "I have been researching this all day",
-              "I lose track of time when I dive deep into this topic"
+                "I cannot stop thinking about my favorite topic",
+                "I am obsessed with my special interest",
+                "I have been researching this all day",
+                "I lose track of time when I dive deep into this topic"
             ],
             "responses": [
-              "That is amazing! Its great to have something you are passionate about.",
-              "Your interest sounds really exciting. Want to share more about it?",
-              "I love how enthusiastic you are. Your focus is a strength!"
+                "That is amazing! Its great to have something you are passionate about.",
+                "Your interest sounds really exciting. Want to share more about it?",
+                "I love how enthusiastic you are. Your focus is a strength!"
             ]
-          },
-          {
-            "tag": "executive-dysfunction",
-            "patterns": [
-              "I want to do it but I can’t start",
-              "I am just stuck",
-              "I cant get out of bed",
-              "Even simple tasks feel impossible",
-              "Why cant I just do the thing?"
-            ],
-            "responses": [
-              "It is okay. Starting can be the hardest part. Can we break it down together?",
-              "You are not lazy — your brain is just wired differently. One step at a time.",
-              "Maybe start with something super small. What is one tiny thing you could do right now?"
-            ]
-          },
-          {
+        },
+        {
             "tag": "masking",
             "patterns": [
-              "I pretend to be someone else",
-              "I hide my real self",
-              "People don't know the real me",
-              "I fake being normal",
-              "I feel exhausted from masking"
+                "I pretend to be someone else",
+                "I hide my real self",
+                "People don't know the real me",
+                "I fake being normal",
+                "I feel exhausted from masking"
             ],
             "responses": [
-              "It is exhausting to mask all the time. You deserve to be your authentic self.",
-              "You do not have to hide who you are with me. I am here to listen without judgment.",
-              "You are enough just as you are — no mask needed here."
+                "It is exhausting to mask all the time. You deserve to be your authentic self.",
+                "You do not have to hide who you are with me. I am here to listen without judgment.",
+                "You are enough just as you are — no mask needed here."
             ]
-          }, 
-          {
+        },
+        {
             "tag": "adhd-distracted",
             "patterns": [
-              "I cannot focus",
-              "My mind keeps wandering",
-              "I get distracted so easily",
-              "I was working but now I'm scrolling",
-              "I cannot stay on task"
+                "I cannot focus",
+                "My mind keeps wandering",
+                "I get distracted so easily",
+                "I was working but now I'm scrolling",
+                "I cannot stay on task"
             ],
             "responses": [
-              "It is okay to feel scattered. Let us try a small focus session together.",
-              "You are doing your best. Maybe a short break or a timer could help?",
-              "Distraction happens — be kind to yourself and try again when you are ready."
+                "It is okay to feel scattered. Let us try a small focus session together.",
+                "You are doing your best. Maybe a short break or a timer could help?",
+                "Distraction happens — be kind to yourself and try again when you are ready."
             ]
-          },
-          {
+        },
+        {
             "tag": "adhd-impulsive",
             "patterns": [
-              "I keep blurting things out",
-              "I bought something without thinking",
-              "I act before I think",
-              "I keep interrupting people",
-              "I regret being impulsive"
+                "I keep blurting things out",
+                "I bought something without thinking",
+                "I act before I think",
+                "I keep interrupting people",
+                "I regret being impulsive"
             ],
             "responses": [
-              "Impulses can be hard to manage, but you are not alone in this.",
-              "It is okay — recognizing it is a step forward. Would you like to reflect on what triggered it?",
-              "Let us take a moment to pause and reset. Tomorrow is a new chance to try again."
+                "Impulses can be hard to manage, but you are not alone in this.",
+                "It is okay — recognizing it is a step forward. Would you like to reflect on what triggered it?",
+                "Let us take a moment to pause and reset. Tomorrow is a new chance to try again."
             ]
-          },
-          {
+        },
+        {
             "tag": "adhd-time-blindness",
             "patterns": [
-              "I lost track of time",
-              "I didn’t realize it was that late",
-              "Where did the day go?",
-              "I missed my deadline again",
-              "Time just slipped away"
+                "I lost track of time",
+                "I didn’t realize it was that late",
+                "Where did the day go?",
+                "I missed my deadline again",
+                "Time just slipped away"
             ],
             "responses": [
-              "Time blindness is a real ADHD struggle. You are not lazy — your brain just works differently.",
-              "Would setting small alarms or reminders help you keep track?",
-              "Do not be hard on yourself — tomorrow’s a fresh start to try a new routine."
+                "Time blindness is a real ADHD struggle. You are not lazy — your brain just works differently.",
+                "Would setting small alarms or reminders help you keep track?",
+                "Do not be hard on yourself — tomorrow’s a fresh start to try a new routine."
             ]
-          },
-          {
+        },
+        {
             "tag": "autism-routine-change",
             "patterns": [
-              "My schedule changed and I feel anxious",
-              "I hate when plans change suddenly",
-              "Unexpected changes stress me out",
-              "I was prepared for one thing, but it changed",
-              "I can't handle this change"
+                "My schedule changed and I feel anxious",
+                "I hate when plans change suddenly",
+                "Unexpected changes stress me out",
+                "I was prepared for one thing, but it changed",
+                "I can't handle this change"
             ],
             "responses": [
-              "Unexpected changes can be really tough. You are allowed to feel upset.",
-              "Is there anything we can do to make the new routine feel more manageable?",
-              "Would it help to build a new plan together for today?"
+                "Unexpected changes can be really tough. You are allowed to feel upset.",
+                "Is there anything we can do to make the new routine feel more manageable?",
+                "Would it help to build a new plan together for today?"
             ]
-          },
-          {
+        },
+        {
             "tag": "autism-meltdown",
             "patterns": [
-              "I feel like I am going to explode",
-              "I cannot handle anything right now",
-              "Everything is too much",
-              "I just want to shut down",
-              "I am having a meltdown"
+                "I feel like I am going to explode",
+                "I cannot handle anything right now",
+                "Everything is too much",
+                "I just want to shut down",
+                "I am having a meltdown"
             ],
             "responses": [
-              "I am here for you. Lets take a deep breath together.",
-              "You are safe, and its okay to feel overwhelmed. Do you want a calming suggestion?",
-              "Its okay to step away and recharge. You are not alone."
+                "I am here for you. Lets take a deep breath together.",
+                "You are safe, and its okay to feel overwhelmed. Do you want a calming suggestion?",
+                "Its okay to step away and recharge. You are not alone."
             ]
-          },
-          {
+        },
+        {
             "tag": "autism-nonverbal",
             "patterns": [
-              "I do not know how to express what I feel",
-              "Words are hard right now",
-              "I go nonverbal sometimes",
-              "I can't talk but I want to be heard",
-              "Talking drains me"
+                "I do not know how to express what I feel",
+                "Words are hard right now",
+                "I go nonverbal sometimes",
+                "I can't talk but I want to be heard",
+                "Talking drains me"
             ],
             "responses": [
-              "Its okay to not use words. I am here, and I understand.",
-              "Would you like to use emojis, images, or type how you feel instead?",
-              "Take your time. You do not need to explain yourself — your presence is enough."
+                "Its okay to not use words. I am here, and I understand.",
+                "Would you like to use emojis, images, or type how you feel instead?",
+                "Take your time. You do not need to explain yourself — your presence is enough."
             ]
-          },
-          
-          
-        
+        },
         {
             "tag": "about",
             "patterns": [
@@ -1360,287 +1350,143 @@
             ]
         },
         {
-            "tag": "grief",
+            "tag": "burnout",
             "patterns": [
-                "I'm grieving",
-                "I lost someone",
-                "I'm heartbroken"
+                "I'm feeling burnt out",
+                "Burnout symptoms",
+                "I feel exhausted and overwhelmed",
+                "I'm mentally drained"
             ],
             "responses": [
-                "I'm sorry for your loss. It's okay to grieve and feel sad.",
-                "Grieving can be a long process. Can you share more about what you're feeling?"
+                "Burnout is really tough. Try taking small breaks and focus on the basics like rest, hydration, and breathing.",
+                "You're carrying a lot. It’s okay to pause and reset. What part of your day feels the heaviest?",
+                "Burnout can happen when your mind and body are overloaded. I'm here to help you understand what you need."
             ]
         },
         {
-            "tag": "relationship_issues",
+            "tag": "adhd_task_paralysis",
             "patterns": [
-                "I have problems in my relationship",
-                "I'm having issues with my partner",
-                "My friend and I are fighting"
+                "I can't start tasks",
+                "Task paralysis",
+                "Why is starting work so hard",
+                "ADHD makes it hard to begin things"
             ],
             "responses": [
-                "Relationship issues can be tough. What’s going on?",
-                "Communication is key in relationships. Have you talked to them about how you feel?"
+                "Task paralysis is common with ADHD. Try breaking the task into a 2-minute micro-step.",
+                "Starting is the hardest part. What’s the smallest possible action you can take right now?",
+                "You're not lazy — your brain is overwhelmed. Let's break it down together."
             ]
         },
         {
-            "tag": "loneliness",
+            "tag": "motivation_loss",
             "patterns": [
-                "I'm feeling lonely",
-                "I don’t have anyone to talk to",
-                "I feel isolated"
+                "I have no motivation",
+                "I can’t get myself to do anything",
+                "Feeling unmotivated"
             ],
             "responses": [
-                "Feeling lonely is difficult. Have you tried reaching out to friends or family?",
-                "You’re not alone in this. Let’s talk about what you’re experiencing."
+                "Motivation often comes *after* starting, not before. Let’s take a tiny first step.",
+                "It’s okay to feel unmotivated. What’s one thing you want to accomplish today?",
+                "Be kind to yourself — low motivation can happen when your mind is tired."
             ]
         },
         {
-            "tag": "motivation",
+            "tag": "emotional_numbness",
             "patterns": [
-                "I lack motivation",
-                "I can't get started",
-                "I'm feeling unmotivated"
+                "I don't feel anything",
+                "I'm emotionally numb",
+                "Why can't I feel emotions",
+                "Everything feels empty"
             ],
             "responses": [
-                "It’s common to feel unmotivated at times. What are you trying to accomplish?",
-                "Setting small goals can help. What’s one small step you could take today?"
+                "Emotional numbness often appears when your mind is overwhelmed. It’s a form of protection, not failure.",
+                "Feeling empty can be scary. You’re not alone — would you like to talk about what led up to this?",
+                "Sometimes the body shuts down emotions to avoid overload. Gentle grounding can help reconnect."
             ]
         },
         {
-            "tag": "sleep_issues",
+            "tag": "anxiety_spike",
             "patterns": [
-                "I can't sleep",
-                "I'm having insomnia",
-                "I don’t feel rested"
+                "I'm having sudden anxiety",
+                "My anxiety increased suddenly",
+                "Why am I panicking",
+                "I feel a panic attack coming"
             ],
             "responses": [
-                "Sleep issues can affect your mood. Have you tried any relaxation techniques before bed?",
-                "It's important to have a good sleep routine. Would you like tips on improving your sleep?"
+                "It's okay. Slow breathing can help — inhale for 4 seconds, exhale for 6.",
+                "You’re safe. Sudden anxiety often comes from stress your body hasn't processed yet.",
+                "Try grounding: name five things you can see, four you can touch, three you can hear."
             ]
         },
         {
-            "tag": "feeling_overwhelmed",
+            "tag": "overthinking",
             "patterns": [
-                "I feel overwhelmed",
-                "Everything is too much right now",
-                "I can't handle this stress"
+                "I can't stop overthinking",
+                "My mind won't stop",
+                "I keep replaying everything",
+                "I'm stuck in my thoughts"
             ],
             "responses": [
-                "It’s understandable to feel overwhelmed. Can you identify what’s causing this feeling?",
-                "Breaking tasks into smaller steps can help. What’s one thing you can tackle first?"
+                "Overthinking can trap your mind in loops. Try focusing on what you can control right now.",
+                "Your brain is trying to protect you by checking everything, even if it feels exhausting.",
+                "Let’s slow down together — what thought is repeating the most?"
             ]
         },
         {
-            "tag": "seeking_professional_help",
+            "tag": "shutdown",
             "patterns": [
-                "Should I see a therapist?",
-                "I think I need professional help",
-                "How do I find a therapist?"
+                "I feel like shutting down",
+                "My brain suddenly stopped working",
+                "I can’t talk or think anymore",
+                "I feel frozen emotionally and mentally"
             ],
             "responses": [
-                "It’s great that you're considering professional help. They can provide support tailored to your needs.",
-                "I can help you find resources. Would you like suggestions for local therapists?"
+                "Shutdowns happen when your mind is overloaded — it's a natural response, not a failure.",
+                "Be gentle with yourself. Reduce sensory input and give your brain space to reset.",
+                "Try grounding: slow breathing, dim lights, or stepping away from stimulation."
             ]
         },
         {
-            "tag": "coping_with_change",
+            "tag": "rejection_sensitive_dysphoria",
             "patterns": [
-                "I’m going through a big change",
-                "How do I cope with change?",
-                "I don’t like change"
+                "I take criticism too personally",
+                "Rejection hurts me more than it should",
+                "Why does small rejection feel unbearable",
+                "I feel devastated when someone is upset with me"
             ],
             "responses": [
-                "Change can be challenging. What kind of change are you experiencing?",
-                "It’s okay to feel uneasy about change. Let’s explore how you can adapt."
+                "RSD can make even tiny comments feel overwhelming — you're not imagining it.",
+                "Your brain reacts intensely to perceived rejection, but it doesn’t define your worth.",
+                "It’s okay to feel sensitive. Let’s look at what triggered this reaction together."
             ]
         },
         {
-            "tag": "self_esteem_issues",
+            "tag": "sensory_seeking",
             "patterns": [
-                "I don’t feel good about myself",
-                "I have low self-esteem",
-                "I compare myself to others"
+                "I need strong sensations to feel normal",
+                "I crave stimulation",
+                "I need loud music or movement to focus",
+                "I feel under-stimulated"
             ],
             "responses": [
-                "Self-esteem can be tricky. What are some things you like about yourself?",
-                "It’s important to focus on your strengths. Can we talk about some achievements you’re proud of?"
+                "Sensory seeking is valid — your brain may need stronger input to regulate.",
+                "Try using sensory tools: movement, textured objects, strong sounds, or deep pressure.",
+                "Being under-stimulated can feel restless. What type of sensation helps you focus best?"
             ]
         },
         {
-            "tag": "mindfulness_and_meditation",
+            "tag": "decision_fatigue",
             "patterns": [
-                "How do I practice mindfulness?",
-                "What is meditation?",
-                "Can you guide me through mindfulness?"
+                "I can't make decisions anymore",
+                "Even small choices feel exhausting",
+                "Why is deciding anything so hard",
+                "I feel mentally drained from choosing things"
             ],
             "responses": [
-                "Mindfulness can help you feel more present. Have you tried focusing on your breath?",
-                "Meditation can be a great tool. Would you like to try a simple breathing exercise?"
+                "Decision fatigue happens when your brain is overloaded — even tiny choices can feel heavy.",
+                "Try reducing choices: pick between two options instead of many.",
+                "It's okay if deciding feels hard right now. Your mind needs rest and fewer demands."
             ]
-        },
-        {
-            "tag": "coping_with_trauma",
-            "patterns": [
-                "I experienced something traumatic",
-                "I can't get over my past",
-                "I'm feeling triggered"
-            ],
-            "responses": [
-                "I'm sorry to hear that you're dealing with trauma. It's important to talk about it.",
-                "Have you considered speaking with a professional? They can help you process your feelings."
-            ]
-        },
-        {
-            "tag": "coping_with_anger",
-            "patterns": [
-                "I'm feeling angry",
-                "I have anger issues",
-                "I don't know how to manage my anger"
-            ],
-            "responses": [
-                "Anger is a normal emotion, but it’s important to find healthy ways to cope. Can you describe what's making you angry?",
-                "Consider taking a few deep breaths or stepping outside for a moment. Would you like more tips?"
-            ]
-        },
-        {
-  "tag": "burnout",
-  "patterns": [
-    "I'm feeling burnt out",
-    "Burnout symptoms",
-    "I feel exhausted and overwhelmed",
-    "I'm mentally drained"
-  ],
-  "responses": [
-    "Burnout is really tough. Try taking small breaks and focus on the basics like rest, hydration, and breathing.",
-    "You're carrying a lot. It’s okay to pause and reset. What part of your day feels the heaviest?",
-    "Burnout can happen when your mind and body are overloaded. I'm here to help you understand what you need."
-  ]
-},
-{
-  "tag": "adhd_task_paralysis",
-  "patterns": [
-    "I can't start tasks",
-    "Task paralysis",
-    "Why is starting work so hard",
-    "ADHD makes it hard to begin things"
-  ],
-  "responses": [
-    "Task paralysis is common with ADHD. Try breaking the task into a 2-minute micro-step.",
-    "Starting is the hardest part. What’s the smallest possible action you can take right now?",
-    "You're not lazy — your brain is overwhelmed. Let's break it down together."
-  ]
-},
-{
-  "tag": "motivation_loss",
-  "patterns": [
-    "I have no motivation",
-    "I can’t get myself to do anything",
-    "Feeling unmotivated"
-  ],
-  "responses": [
-    "Motivation often comes *after* starting, not before. Let’s take a tiny first step.",
-    "It’s okay to feel unmotivated. What’s one thing you want to accomplish today?",
-    "Be kind to yourself — low motivation can happen when your mind is tired."
-  ]
-},
-{
-  "tag": "emotional_numbness",
-  "patterns": [
-    "I don't feel anything",
-    "I'm emotionally numb",
-    "Why can't I feel emotions",
-    "Everything feels empty"
-  ],
-  "responses": [
-    "Emotional numbness often appears when your mind is overwhelmed. It’s a form of protection, not failure.",
-    "Feeling empty can be scary. You’re not alone — would you like to talk about what led up to this?",
-    "Sometimes the body shuts down emotions to avoid overload. Gentle grounding can help reconnect."
-  ]
-},
-{
-  "tag": "anxiety_spike",
-  "patterns": [
-    "I'm having sudden anxiety",
-    "My anxiety increased suddenly",
-    "Why am I panicking",
-    "I feel a panic attack coming"
-  ],
-  "responses": [
-    "It's okay. Slow breathing can help — inhale for 4 seconds, exhale for 6.",
-    "You’re safe. Sudden anxiety often comes from stress your body hasn't processed yet.",
-    "Try grounding: name five things you can see, four you can touch, three you can hear."
-  ]
-},
-{
-  "tag": "overthinking",
-  "patterns": [
-    "I can't stop overthinking",
-    "My mind won't stop",
-    "I keep replaying everything",
-    "I'm stuck in my thoughts"
-  ],
-  "responses": [
-    "Overthinking can trap your mind in loops. Try focusing on what you can control right now.",
-    "Your brain is trying to protect you by checking everything, even if it feels exhausting.",
-    "Let’s slow down together — what thought is repeating the most?"
-  ]
-},
-{
-  "tag": "shutdown",
-  "patterns": [
-    "I feel like shutting down",
-    "My brain suddenly stopped working",
-    "I can’t talk or think anymore",
-    "I feel frozen emotionally and mentally"
-  ],
-  "responses": [
-    "Shutdowns happen when your mind is overloaded — it's a natural response, not a failure.",
-    "Be gentle with yourself. Reduce sensory input and give your brain space to reset.",
-    "Try grounding: slow breathing, dim lights, or stepping away from stimulation."
-  ]
-},
-{
-  "tag": "rejection_sensitive_dysphoria",
-  "patterns": [
-    "I take criticism too personally",
-    "Rejection hurts me more than it should",
-    "Why does small rejection feel unbearable",
-    "I feel devastated when someone is upset with me"
-  ],
-  "responses": [
-    "RSD can make even tiny comments feel overwhelming — you're not imagining it.",
-    "Your brain reacts intensely to perceived rejection, but it doesn’t define your worth.",
-    "It’s okay to feel sensitive. Let’s look at what triggered this reaction together."
-  ]
-},
-{
-  "tag": "sensory_seeking",
-  "patterns": [
-    "I need strong sensations to feel normal",
-    "I crave stimulation",
-    "I need loud music or movement to focus",
-    "I feel under-stimulated"
-  ],
-  "responses": [
-    "Sensory seeking is valid — your brain may need stronger input to regulate.",
-    "Try using sensory tools: movement, textured objects, strong sounds, or deep pressure.",
-    "Being under-stimulated can feel restless. What type of sensation helps you focus best?"
-  ]
-},
-{
-  "tag": "decision_fatigue",
-  "patterns": [
-    "I can't make decisions anymore",
-    "Even small choices feel exhausting",
-    "Why is deciding anything so hard",
-    "I feel mentally drained from choosing things"
-  ],
-  "responses": [
-    "Decision fatigue happens when your brain is overloaded — even tiny choices can feel heavy.",
-    "Try reducing choices: pick between two options instead of many.",
-    "It's okay if deciding feels hard right now. Your mind needs rest and fewer demands."
-  ]
-}
+        }
     ]
 }
