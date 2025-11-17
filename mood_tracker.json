@@ -6,5 +6,19 @@
     {
         "mood": "Neutral",
         "timestamp": "2025-11-15 10:10:32"
+    },
+    {
+        "mood": "Happy",
+        "timestamp": "2025-11-17 19:30:33"
+    },
+    {
+        "mood": "😐 Neutral",
+        "note": "",
+        "timestamp": "2025-11-17 20:49:11"
+    },
+    {
+        "mood": "😐 Neutral",
+        "note": "",
+        "timestamp": "2025-11-17 21:08:41"
     }
 ]
