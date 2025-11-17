@@ -1,11 +1,11 @@
-import json, random, pickle, re
+import json
+import random
+import pickle
+import re
 import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import SGD
-import nltk
-
-nltk.data.path.append("./nltk_data")
 
 def simple_tokenize(text):
     return re.findall(r'\w+', text.lower())
@@ -61,17 +61,19 @@ def build_model(input_len, output_len):
     return model
 
 def main():
-    intents = load_intents()
-    words, classes, train_x, train_y = prepare_data(intents)
+    try:
+        intents = load_intents()
+        words, classes, train_x, train_y = prepare_data(intents)
 
-    model = build_model(len(train_x[0]), len(train_y[0]))
-    model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5)
+        model = build_model(len(train_x[0]), len(train_y[0]))
+        model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=0)
 
-    model.save("model.h5")
-    pickle.dump(words, open("words.pkl", "wb"))
-    pickle.dump(classes, open("classes.pkl", "wb"))
-
-    print("Training complete. Saved: model.h5, words.pkl, classes.pkl")
+        model.save("model.h5")
+        pickle.dump(words, open("words.pkl", "wb"))
+        pickle.dump(classes, open("classes.pkl", "wb"))
+        print("Training successful")
+    except Exception as e:
+        print(f"Training failed: {e}")
 
 if __name__ == "__main__":
     main()
