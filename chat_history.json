@@ -6,5 +6,37 @@
     {
         "role": "assistant",
         "content": "Hi there. How are you feeling today?"
+    },
+    {
+        "role": "user",
+        "content": "hi"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello there. Glad to see you're back. What's going on in your world right now?"
+    },
+    {
+        "role": "user",
+        "content": "hi"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello there. Glad to see you're back. What's going on in your world right now?"
+    },
+    {
+        "role": "user",
+        "content": "hello"
+    },
+    {
+        "role": "assistant",
+        "content": "Hi there. How are you feeling today?"
+    },
+    {
+        "role": "user",
+        "content": "how are you?"
+    },
+    {
+        "role": "assistant",
+        "content": "I wish you wouldn't say such hurtful things. I'm sorry if I wasn't useful"
     }
 ]

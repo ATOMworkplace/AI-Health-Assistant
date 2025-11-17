@@ -222,27 +222,33 @@ def initialize_model_and_data():
 def apply_complete_theme(theme_mode):
     """Apply comprehensive theme styling for Light and Dark modes."""
     
-    # Common CSS for typing animation
-    typing_css = """
+    # Common CSS for typing animation AND BUBBLES
+    common_css = """
     /* Typing Indicator Animation */
-    .typing-indicator {
-        display: inline-block;
-        padding: 8px 0;
-    }
-    .typing-indicator span {
-        display: inline-block;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        animation: typing 1.4s infinite ease-in-out both;
-        margin-right: 4px;
-    }
+    .typing-indicator { display: inline-block; padding: 8px 0; }
+    .typing-indicator span { display: inline-block; width: 6px; height: 6px; border-radius: 50%; animation: typing 1.4s infinite ease-in-out both; margin-right: 4px; }
     .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
     .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+    @keyframes typing { 0%, 80%, 100% { transform: scale(0); opacity: 0.5; } 40% { transform: scale(1); opacity: 1; } }
     
-    @keyframes typing {
-        0%, 80%, 100% { transform: scale(0); opacity: 0.5; }
-        40% { transform: scale(1); opacity: 1; }
+    /* BUBBLE STYLING & ANIMATION */
+    .chat-bubble {
+        padding: 12px 16px;
+        border-radius: 15px;
+        margin-bottom: 8px;
+        display: inline-block;
+        max-width: 100%;
+        animation: slideIn 0.4s ease-out forwards;
+        opacity: 0; /* Start hidden for animation */
+        transform: translateY(10px);
+    }
+    
+    /* Bubble Entry Animation */
+    @keyframes slideIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
     """
 
@@ -251,15 +257,16 @@ def apply_complete_theme(theme_mode):
         <style>
         body {{ background-color: #f2f8fd; }}
         .title-box {{ background-color: #e0f0ff; padding: 1.5rem; border-radius: 20px; text-align: center; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }}
-        .chat-message {{ padding: 1rem; margin-bottom: 0.8rem; border-radius: 12px; color: black; }}
-        .user {{ background-color: #D0E8FF; text-align: right; }}
-        .assistant {{ background-color: #E6E6FA; }}
+        
         .stButton>button {{ border-radius: 10px; font-weight: 600; }}
         .sidebar .stButton>button {{ background-color: #d6eaff; color: black; }}
         
-        /* Typing dots color for Light Mode */
+        /* Bubble Colors - Light Mode */
+        .user-bubble {{ background-color: #D0E8FF; color: #1a1d24; border-bottom-right-radius: 2px; }}
+        .assistant-bubble {{ background-color: #ffffff; color: #1a1d24; border: 1px solid #e0e0e0; border-bottom-left-radius: 2px; }}
+        
         .typing-indicator span {{ background-color: #555; }}
-        {typing_css}
+        {common_css}
         </style>
         """
     else:  # Dark theme
@@ -269,7 +276,7 @@ def apply_complete_theme(theme_mode):
         [data-testid="stSidebar"] {{ background-color: #262b35; }}
         h1, h2, h3, h4, p, span, div, label {{ color: #e0e0e0 !important; }}
         .title-box {{ background-color: #2d3748; padding: 2rem; border-radius: 15px; text-align: center; margin-bottom: 2rem; border: 1px solid #3d4451; }}
-        .stChatMessage {{ background-color: #2d3748; border-radius: 10px; border: 1px solid #3d4451; }}
+        
         [data-testid="stChatInput"] textarea {{ background-color: #363b47 !important; color: #ffffff !important; border: 1px solid #4a5060 !important; }}
         .stButton > button {{ background-color: #363b47; color: #ffffff; border: 1px solid #4a5060; }}
         .stButton > button:hover {{ background-color: #404552; }}
@@ -277,9 +284,12 @@ def apply_complete_theme(theme_mode):
         ::-webkit-scrollbar-track {{ background: #1a1d24; }}
         ::-webkit-scrollbar-thumb {{ background: #3d4451; border-radius: 5px; }}
         
-        /* Typing dots color for Dark Mode */
+        /* Bubble Colors - Dark Mode */
+        .user-bubble {{ background-color: #3b5998; color: #ffffff; border-bottom-right-radius: 2px; }}
+        .assistant-bubble {{ background-color: #2d3748; color: #e0e0e0; border: 1px solid #3d4451; border-bottom-left-radius: 2px; }}
+        
         .typing-indicator span {{ background-color: #ccc; }}
-        {typing_css}
+        {common_css}
         </style>
         """
 
@@ -359,35 +369,49 @@ async def main():
 
     # --- Chat Logic ---
 
-    # Render Chat History
+    # Render Chat History with Styled Bubbles
     for message in st.session_state.messages:
-        with st.chat_message(message["role"]):
-            st.markdown(message["content"])
+        role = message["role"]
+        # KEEP DEFAULT AVATARS, just style the content
+        with st.chat_message(role):
+            st.markdown(
+                f'<div class="chat-bubble {role}-bubble">{message["content"]}</div>', 
+                unsafe_allow_html=True
+            )
 
     # Handle User Input
     if prompt := st.chat_input("What's on your mind?"):
         # Add user message to state
         st.session_state.messages.append({"role": "user", "content": prompt})
+        
+        # Render User Message immediately with Bubble Style
         with st.chat_message("user"):
-            st.markdown(prompt)
+            st.markdown(
+                f'<div class="chat-bubble user-bubble">{prompt}</div>', 
+                unsafe_allow_html=True
+            )
 
         # Generate Assistant Response
         with st.chat_message("assistant"):
             placeholder = st.empty()
             
-            # SHOW TYPING ANIMATION instead of "Thinking..."
+            # SHOW TYPING ANIMATION inside a bubble
             placeholder.markdown("""
-                <div class="typing-indicator">
-                    <span></span><span></span><span></span>
+                <div class="chat-bubble assistant-bubble">
+                    <div class="typing-indicator">
+                        <span></span><span></span><span></span>
+                    </div>
                 </div>
             """, unsafe_allow_html=True)
             
             # Async prediction
             response = await handle_message_async(prompt, model, words, classes, data)
             
-            # Remove animation and show response
-            placeholder.empty()
-            placeholder.markdown(response)
+            # Remove animation and show response in bubble
+            placeholder.markdown(
+                f'<div class="chat-bubble assistant-bubble">{response}</div>', 
+                unsafe_allow_html=True
+            )
             
             # Add assistant message to state
             st.session_state.messages.append({"role": "assistant", "content": response})
