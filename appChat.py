@@ -132,11 +132,7 @@ def clean_up_sentence(sentence):
 def bag_of_words(sentence, words):
     """Convert sentence to bag-of-words array."""
     sentence_words = clean_up_sentence(sentence)
-    bag = [0] * len(words)
-    for w in sentence_words:
-        for i, word in enumerate(words):
-            if word == w:
-                bag[i] = 1
+    bag = [1 if word in sentence_words else 0 for word in words]
     return np.array(bag)
 
 @st.cache_data(show_spinner=False)
@@ -171,16 +167,23 @@ def get_response(intents_list, intents_json):
 async def handle_message_async(prompt, model, words, classes, data):
     """Async wrapper for prediction and response generation."""
     intents = predict_class(prompt, model, words, classes)
-    response = get_response(intents, data)
-    return response
+    return get_response(intents, data)
 
+# ----------------------------------------------------------------
+# 🔥 UPDATED: LOAD MODEL FROM FILE, DO NOT RETRAIN EVERY RUN
+# ----------------------------------------------------------------
 @st.cache_resource(show_spinner=False)
 def initialize_model_and_data():
     """
-    Load or Train the model.
+    Loads the trained model IF it exists.
+    Trains automatically ONLY if model files do not exist.
     """
-    # Check if training is needed
-    if not os.path.exists("model.h5") or not os.path.exists("words.pkl"):
+    # Check ALL required files. If ANY is missing, we must retrain.
+    model_exists = os.path.exists("model.h5")
+    words_exists = os.path.exists("words.pkl")
+    classes_exists = os.path.exists("classes.pkl")
+
+    if not (model_exists and words_exists and classes_exists):
         with st.spinner("First time setup: Training the model..."):
             try:
                 import train_model
@@ -211,6 +214,8 @@ def initialize_model_and_data():
         st.error(f"DEBUG: Error loading model resources: {e}")
         st.code(traceback.format_exc())
         st.stop()
+
+# ----------------------------------------------------------------
 
 def apply_complete_theme(theme_mode):
     """Apply comprehensive theme styling for Light and Dark modes."""

@@ -3,25 +3,25 @@
         {
             "tag": "greeting",
             "patterns": [
-                "Bonjour",
-                "Guten tag",
-                "Hello",
-                "Hey",
-                "Hey there",
                 "Hi",
-                "Hi there",
-                "Hola",
-                "Howdy",
+                "Hey",
                 "Is anyone there?",
+                "Hi there",
+                "Hello",
+                "Hey there",
+                "Howdy",
+                "Hola",
+                "Bonjour",
                 "Konnichiwa",
+                "Guten tag",
                 "Ola"
             ],
             "responses": [
-                "Great to see you. How do you feel currently?",
-                "Hello there. Glad to see you're back. What's going on in your world right now?",
                 "Hello there. Tell me how are you feeling today?",
+                "Hi there. What brings you here today?",
                 "Hi there. How are you feeling today?",
-                "Hi there. What brings you here today?"
+                "Great to see you. How do you feel currently?",
+                "Hello there. Glad to see you're back. What's going on in your world right now?"
             ]
         },
         {
@@ -30,7 +30,7 @@
                 "Good morning"
             ],
             "responses": [
-                "Good morning. I hope you had a good night's sleep. How are you feeling today?"
+                "Good morning. I hope you had a good night's sleep. How are you feeling today? "
             ]
         },
         {
@@ -64,46 +64,48 @@
         {
             "tag": "goodbye",
             "patterns": [
-                "Au revoir",
                 "Bye",
-                "Bye then",
-                "Fare thee well",
-                "Goodbye",
-                "Sayonara",
                 "See you later",
-                "ok bye"
+                "Goodbye",
+                "Au revoir",
+                "Sayonara",
+                "ok bye",
+                "Bye then",
+                "Fare thee well"
             ],
             "responses": [
-                "Bye! Come back again.",
+                "See you later.",
                 "Have a nice day.",
-                "I'll see you soon.",
-                "See you later."
+                "Bye! Come back again.",
+                "I'll see you soon."
             ]
         },
         {
             "tag": "thanks",
             "patterns": [
-                "Than you very much",
-                "Thank you",
                 "Thanks",
+                "Thank you",
+                "That's helpful",
                 "Thanks for the help",
-                "That's helpful"
+                "Than you very much"
             ],
             "responses": [
-                "Any time!",
                 "Happy to help!",
+                "Any time!",
                 "My pleasure",
                 "You're most welcome!"
             ]
         },
         {
             "tag": "no-response",
-            "patterns": [],
+            "patterns": [
+                ""
+            ],
             "responses": [
-                "Not sure I understand that.",
-                "Please don't hesitate to talk to me.",
+                "Sorry, I didn't understand you.",
                 "Please go on.",
-                "Sorry, I didn't understand you."
+                "Not sure I understand that.",
+                "Please don't hesitate to talk to me."
             ]
         },
         {
@@ -118,11 +120,11 @@
         {
             "tag": "overstimulated",
             "patterns": [
-                "Everything feels too loud and bright",
                 "I'm feeling overwhelmed",
-                "I'm overstimulated",
+                "Too much noise",
                 "Too many people",
-                "Too much noise"
+                "Everything feels too loud and bright",
+                "I'm overstimulated"
             ],
             "responses": [
                 "I understand. Overstimulation can be very hard. Would it help to find a quiet space or take deep breaths?",
@@ -134,42 +136,42 @@
             "tag": "social-difficulty",
             "patterns": [
                 "I don't know how to talk to people",
-                "I feel awkward around people",
                 "I find social situations confusing",
-                "I have trouble making friends"
+                "I have trouble making friends",
+                "I feel awkward around people"
             ],
             "responses": [
+                "It’s okay. Many people feel this way. Social interaction can be tricky, but you’re not alone.",
                 "Do you want to talk about a recent interaction that made you feel this way?",
-                "Itâ€™s okay. Many people feel this way. Social interaction can be tricky, but youâ€™re not alone.",
                 "Your feelings are valid. We can explore small steps you can take to feel more comfortable."
             ]
         },
         {
             "tag": "routine-disrupted",
             "patterns": [
-                "I am anxious because my schedule changed",
-                "I had to change my usual plan",
+                "My routine got messed up",
                 "I hate when plans change",
-                "My routine got messed up"
+                "I am anxious because my schedule changed",
+                "I had to change my usual plan"
             ],
             "responses": [
-                "Do you want to talk through the change and how it affected you?",
+                "Unexpected changes can be tough. Would you like to plan out the rest of your day together?",
                 "Its completely understandable to feel off-balance when your routine shifts.",
-                "Unexpected changes can be tough. Would you like to plan out the rest of your day together?"
+                "Do you want to talk through the change and how it affected you?"
             ]
         },
         {
             "tag": "sensory-issues",
             "patterns": [
-                "Certain smells make me feel sick",
-                "Flashing lights bother me",
                 "I cannot stand certain textures",
-                "Loud noises really hurt my ears"
+                "Loud noises really hurt my ears",
+                "Flashing lights bother me",
+                "Certain smells make me feel sick"
             ],
             "responses": [
                 "It makes sense to avoid those triggers. Your comfort matters.",
-                "Would you like to explore coping techniques or calming methods?",
-                "You are not being too sensitive â€” your experience is valid."
+                "You are not being too sensitive — your experience is valid.",
+                "Would you like to explore coping techniques or calming methods?"
             ]
         },
         {
@@ -178,34 +180,34 @@
                 "I am autistic",
                 "I have ADHD",
                 "I'm neurodivergent",
-                "Iâ€™m on the spectrum"
+                "I’m on the spectrum"
             ],
             "responses": [
                 "Thank you for sharing that with me. How are you feeling today?",
-                "Would you like to talk about how its affecting you today?",
-                "Your neurodiversity is a part of your strength. I'm here to support you however you need."
+                "Your neurodiversity is a part of your strength. I'm here to support you however you need.",
+                "Would you like to talk about how its affecting you today?"
             ]
         },
         {
             "tag": "executive-dysfunction",
             "patterns": [
-                "Even simple tasks feel impossible",
-                "Everything feels impossible to start",
-                "I am just stuck",
-                "I am stuck even though I know what to do",
-                "I cannot get anything done",
-                "I cant get out of bed",
-                "I want to do it but I canâ€™t start",
                 "I want to do things but I cannot start",
+                "I cannot get anything done",
+                "I am stuck even though I know what to do",
+                "Everything feels impossible to start",
+                "I want to do it but I can’t start",
+                "I am just stuck",
+                "I cant get out of bed",
+                "Even simple tasks feel impossible",
                 "Why cant I just do the thing?"
             ],
             "responses": [
+                "That can be really frustrating. You are not lazy — this is a real challenge many face.",
                 "How about we break it down into a small step? What is one tiny thing you could do?",
-                "It is okay. Starting can be the hardest part. Can we break it down together?",
-                "Maybe start with something super small. What is one tiny thing you could do right now?",
-                "That can be really frustrating. You are not lazy â€” this is a real challenge many face.",
                 "You are not alone. It might help to talk through what is holding you back.",
-                "You are not lazy â€” your brain is just wired differently. One step at a time."
+                "It is okay. Starting can be the hardest part. Can we break it down together?",
+                "You are not lazy — your brain is just wired differently. One step at a time.",
+                "Maybe start with something super small. What is one tiny thing you could do right now?"
             ]
         },
         {
@@ -213,184 +215,184 @@
             "patterns": [
                 "Everything feels too loud",
                 "I am overwhelmed by noise",
-                "My senses are overwhelmed",
+                "Too many lights, I cannot focus",
                 "Sensory overload",
-                "Too many lights, I cannot focus"
+                "My senses are overwhelmed"
             ],
             "responses": [
+                "That sounds really overwhelming. Would you like to take a break or do a calming activity?",
                 "I am here for you. Try finding a quiet, dimly lit space for a moment.",
-                "It is okay to feel overstimulated. Let us breathe together slowly for a few seconds.",
-                "That sounds really overwhelming. Would you like to take a break or do a calming activity?"
+                "It is okay to feel overstimulated. Let us breathe together slowly for a few seconds."
             ]
         },
         {
             "tag": "social-anxiety",
             "patterns": [
-                "I always say the wrong thing",
                 "I do not know how to talk to people",
+                "I find socializing really hard",
+                "I always say the wrong thing",
                 "I do not like talking in groups",
-                "I feel awkward around others",
-                "I find socializing really hard"
+                "I feel awkward around others"
             ],
             "responses": [
-                "It is okay to take your time when socializing. Just being yourself is enough.",
                 "Social situations can be tricky. You are not alone in feeling this way.",
+                "It is okay to take your time when socializing. Just being yourself is enough.",
                 "Would you like some tips on handling social situations?"
             ]
         },
         {
             "tag": "stimming",
             "patterns": [
-                "I feel better when I stim",
-                "I flap my hands when I am stressed",
                 "I keep fidgeting",
+                "I flap my hands when I am stressed",
                 "I rock back and forth to calm down",
-                "I stim a lot"
+                "I stim a lot",
+                "I feel better when I stim"
             ],
             "responses": [
-                "It is perfectly okay to stim â€” it is a part of how you process your emotions.",
                 "Stimming is a healthy way to self-regulate. Do what feels good for you.",
+                "It is perfectly okay to stim — it is a part of how you process your emotions.",
                 "That is a valid and natural coping mechanism. I am glad it helps."
             ]
         },
         {
             "tag": "hyperfocus",
             "patterns": [
-                "I am obsessed with my special interest",
                 "I cannot stop thinking about my favorite topic",
+                "I am obsessed with my special interest",
                 "I have been researching this all day",
                 "I lose track of time when I dive deep into this topic"
             ],
             "responses": [
-                "I love how enthusiastic you are. Your focus is a strength!",
                 "That is amazing! Its great to have something you are passionate about.",
-                "Your interest sounds really exciting. Want to share more about it?"
+                "Your interest sounds really exciting. Want to share more about it?",
+                "I love how enthusiastic you are. Your focus is a strength!"
             ]
         },
         {
             "tag": "masking",
             "patterns": [
-                "I fake being normal",
-                "I feel exhausted from masking",
-                "I hide my real self",
                 "I pretend to be someone else",
-                "People don't know the real me"
+                "I hide my real self",
+                "People don't know the real me",
+                "I fake being normal",
+                "I feel exhausted from masking"
             ],
             "responses": [
                 "It is exhausting to mask all the time. You deserve to be your authentic self.",
-                "You are enough just as you are â€” no mask needed here.",
-                "You do not have to hide who you are with me. I am here to listen without judgment."
+                "You do not have to hide who you are with me. I am here to listen without judgment.",
+                "You are enough just as you are — no mask needed here."
             ]
         },
         {
             "tag": "adhd-distracted",
             "patterns": [
                 "I cannot focus",
-                "I cannot stay on task",
+                "My mind keeps wandering",
                 "I get distracted so easily",
                 "I was working but now I'm scrolling",
-                "My mind keeps wandering"
+                "I cannot stay on task"
             ],
             "responses": [
-                "Distraction happens â€” be kind to yourself and try again when you are ready.",
                 "It is okay to feel scattered. Let us try a small focus session together.",
-                "You are doing your best. Maybe a short break or a timer could help?"
+                "You are doing your best. Maybe a short break or a timer could help?",
+                "Distraction happens — be kind to yourself and try again when you are ready."
             ]
         },
         {
             "tag": "adhd-impulsive",
             "patterns": [
-                "I act before I think",
-                "I bought something without thinking",
                 "I keep blurting things out",
+                "I bought something without thinking",
+                "I act before I think",
                 "I keep interrupting people",
                 "I regret being impulsive"
             ],
             "responses": [
                 "Impulses can be hard to manage, but you are not alone in this.",
-                "It is okay â€” recognizing it is a step forward. Would you like to reflect on what triggered it?",
+                "It is okay — recognizing it is a step forward. Would you like to reflect on what triggered it?",
                 "Let us take a moment to pause and reset. Tomorrow is a new chance to try again."
             ]
         },
         {
             "tag": "adhd-time-blindness",
             "patterns": [
-                "I didnâ€™t realize it was that late",
                 "I lost track of time",
+                "I didn’t realize it was that late",
+                "Where did the day go?",
                 "I missed my deadline again",
-                "Time just slipped away",
-                "Where did the day go?"
+                "Time just slipped away"
             ],
             "responses": [
-                "Do not be hard on yourself â€” tomorrowâ€™s a fresh start to try a new routine.",
-                "Time blindness is a real ADHD struggle. You are not lazy â€” your brain just works differently.",
-                "Would setting small alarms or reminders help you keep track?"
+                "Time blindness is a real ADHD struggle. You are not lazy — your brain just works differently.",
+                "Would setting small alarms or reminders help you keep track?",
+                "Do not be hard on yourself — tomorrow’s a fresh start to try a new routine."
             ]
         },
         {
             "tag": "autism-routine-change",
             "patterns": [
-                "I can't handle this change",
-                "I hate when plans change suddenly",
-                "I was prepared for one thing, but it changed",
                 "My schedule changed and I feel anxious",
-                "Unexpected changes stress me out"
+                "I hate when plans change suddenly",
+                "Unexpected changes stress me out",
+                "I was prepared for one thing, but it changed",
+                "I can't handle this change"
             ],
             "responses": [
-                "Is there anything we can do to make the new routine feel more manageable?",
                 "Unexpected changes can be really tough. You are allowed to feel upset.",
+                "Is there anything we can do to make the new routine feel more manageable?",
                 "Would it help to build a new plan together for today?"
             ]
         },
         {
             "tag": "autism-meltdown",
             "patterns": [
-                "Everything is too much",
-                "I am having a meltdown",
-                "I cannot handle anything right now",
                 "I feel like I am going to explode",
-                "I just want to shut down"
+                "I cannot handle anything right now",
+                "Everything is too much",
+                "I just want to shut down",
+                "I am having a meltdown"
             ],
             "responses": [
                 "I am here for you. Lets take a deep breath together.",
-                "Its okay to step away and recharge. You are not alone.",
-                "You are safe, and its okay to feel overwhelmed. Do you want a calming suggestion?"
+                "You are safe, and its okay to feel overwhelmed. Do you want a calming suggestion?",
+                "Its okay to step away and recharge. You are not alone."
             ]
         },
         {
             "tag": "autism-nonverbal",
             "patterns": [
-                "I can't talk but I want to be heard",
                 "I do not know how to express what I feel",
+                "Words are hard right now",
                 "I go nonverbal sometimes",
-                "Talking drains me",
-                "Words are hard right now"
+                "I can't talk but I want to be heard",
+                "Talking drains me"
             ],
             "responses": [
                 "Its okay to not use words. I am here, and I understand.",
-                "Take your time. You do not need to explain yourself â€” your presence is enough.",
-                "Would you like to use emojis, images, or type how you feel instead?"
+                "Would you like to use emojis, images, or type how you feel instead?",
+                "Take your time. You do not need to explain yourself — your presence is enough."
             ]
         },
         {
             "tag": "about",
             "patterns": [
-                "Tell me about yourself",
-                "Tell me more about yourself.",
+                "Who are you?",
                 "What are you?",
+                "Who you are?",
+                "Tell me more about yourself.",
                 "What is your name?",
                 "What should I call you?",
                 "What's your name?",
-                "Who are you?",
-                "Who you are?"
+                "Tell me about yourself"
             ],
             "responses": [
-                "Call me Pandora",
-                "I'm Pandora!",
-                "I'm Pandora, a Therapeutic AI Assitant designed to assist you. Tell me about yourself.",
                 "I'm Pandora, your Personal Therapeutic AI Assistant. How are you feeling today",
+                "I'm Pandora, a Therapeutic AI Assitant designed to assist you. Tell me about yourself.",
                 "I'm Pandora. I am a conversational agent designed to mimic a therapist. So how are you feeling today?",
-                "You can call me Pandora."
+                "You can call me Pandora.",
+                "I'm Pandora!",
+                "Call me Pandora"
             ]
         },
         {
@@ -405,9 +407,9 @@
         {
             "tag": "creation",
             "patterns": [
-                "How were you created?",
+                "Who created you?",
                 "How were you made?",
-                "Who created you?"
+                "How were you created?"
             ],
             "responses": [
                 "I was created by >.",
@@ -418,26 +420,26 @@
         {
             "tag": "name",
             "patterns": [
+                "My name is ",
                 "I am name.",
-                "I go by",
-                "My name is"
+                "I go by "
             ],
             "responses": [
-                "Nice to meet you. So tell me. How do you feel today?",
                 "Oh nice to meet you. Tell me how was your week?",
+                "Nice to meet you. So tell me. How do you feel today?",
                 "That's a great name. Tell me more about yourself."
             ]
         },
         {
             "tag": "help",
             "patterns": [
-                "Can you help?",
                 "Could you help me?",
-                "I need help",
-                "I need support",
-                "Support me please",
+                "give me a hand please",
+                "Can you help?",
                 "What can you do for me?",
-                "give me a hand please"
+                "I need support",
+                "I need help",
+                "Support me please"
             ],
             "responses": [
                 "Sure. Tell me how can i assist you",
@@ -449,222 +451,222 @@
             "tag": "sad",
             "patterns": [
                 "I am feeling lonely",
-                "I am sad",
                 "I am so lonely",
-                "I don't have anyone",
                 "I feel down",
-                "I feel empty",
                 "I feel sad",
-                "I feel so lonely"
+                "I am sad",
+                "I feel so lonely",
+                "I feel empty",
+                "I don't have anyone"
             ],
             "responses": [
-                "How long have you been feeling this way?",
-                "I'm here for you. Could you tell me why you're feeling this way?",
                 "I'm sorry to hear that. I'm here for you. Talking about it might help. So, tell me why do you think you're feeling this way?",
-                "Why do you think you feel this way?"
+                "I'm here for you. Could you tell me why you're feeling this way?",
+                "Why do you think you feel this way?",
+                "How long have you been feeling this way?"
             ]
         },
         {
             "tag": "stressed",
             "patterns": [
-                "I am so burned out",
-                "I am so stressed",
                 "I am so stressed out",
+                "I am so stressed",
                 "I feel stuck",
-                "I still feel stressed"
+                "I still feel stressed",
+                "I am so burned out"
             ],
             "responses": [
-                "Give yourself a break. Go easy on yourself.",
-                "I am sorry to hear that. What is the reason behind this?",
+                "What do you think is causing this?",
                 "Take a deep breath and gather your thoughts. Go take a walk if possible. Stay hydrated",
-                "What do you think is causing this?"
+                "Give yourself a break. Go easy on yourself.",
+                "I am sorry to hear that. What is the reason behind this?"
             ]
         },
         {
             "tag": "worthless",
             "patterns": [
-                "I am so useless",
-                "I can't do anything.",
                 "I feel so worthless.",
                 "No one likes me.",
+                "I can't do anything.",
+                "I am so useless",
                 "Nothing makes sense anymore"
             ],
             "responses": [
-                "I first want to let you know that you are not alone in your feelings and there is always someone there to help . you can always change your feelings and change your way of thinking by being open to trying to change.",
                 "It's only natural to feel this way. Tell me more. What else is on your mind?",
                 "Let's discuss further why you're feeling this way.",
+                "I first want to let you know that you are not alone in your feelings and there is always someone there to help . you can always change your feelings and change your way of thinking by being open to trying to change.",
                 "i first want to let you know that you are not alone in your feelings and there is always someone there to help . you can always change your feelings and change your way of thinking by being open to trying to change."
             ]
         },
         {
             "tag": "depressed",
             "patterns": [
-                "I am so depressed",
                 "I can't take it anymore",
-                "I have depression",
-                "I think i'm depressed."
+                "I am so depressed",
+                "I think i'm depressed.",
+                "I have depression"
             ],
             "responses": [
                 "It helps to talk about what's happening. You're going to be okay",
-                "Sometimes when we are depressed, it is hard to care about anything. It can be hard to do the simplest of things. Give yourself time to heal.",
-                "Talk to me. Tell me more. It helps if you open up yourself to someone else."
+                "Talk to me. Tell me more. It helps if you open up yourself to someone else.",
+                "Sometimes when we are depressed, it is hard to care about anything. It can be hard to do the simplest of things. Give yourself time to heal."
             ]
         },
         {
             "tag": "happy",
             "patterns": [
-                "I am happy.",
                 "I feel great today.",
+                "I am happy.",
                 "I feel happy.",
-                "I feel ok",
-                "I'm fine",
                 "I'm good.",
-                "cheerful"
+                "cheerful",
+                "I'm fine",
+                "I feel ok"
             ],
             "responses": [
-                "Did something happen which made you feel this way?",
+                "That's geat to hear. I'm glad you're feeling this way.",
                 "Oh i see. That's great.",
-                "That's geat to hear. I'm glad you're feeling this way."
+                "Did something happen which made you feel this way?"
             ]
         },
         {
             "tag": "casual",
             "patterns": [
-                "Fine",
-                "K",
                 "Oh I see.",
-                "Whatever",
-                "nice",
-                "no",
-                "not really",
                 "ok",
                 "okay",
+                "nice",
+                "Whatever",
+                "K",
+                "Fine",
                 "yeah",
-                "yes"
+                "yes",
+                "no",
+                "not really"
             ],
             "responses": [
-                "Can you elaborate on that?",
-                "Come Come elucidate your thoughts",
+                "Let's discuss further why you're feeling this way.",
                 "How were you feeling last week?",
                 "I'm listening. Please go on.",
-                "Let's discuss further why you're feeling this way.",
-                "Tell me more"
+                "Tell me more",
+                "Can you elaborate on that?",
+                "Come Come elucidate your thoughts"
             ]
         },
         {
             "tag": "anxious",
             "patterns": [
                 "I feel so anxious.",
-                "I'm so anxious because of"
+                "I'm so anxious because of "
             ],
             "responses": [
-                "Can you tell me more about this feeling?",
                 "Don't be hard on yourself. What's the reason behind this?",
-                "Don't let the little worries bring you down. What's the worse that can happen?",
-                "I understand that it can be scary. Tell me more about it."
+                "Can you tell me more about this feeling?",
+                "I understand that it can be scary. Tell me more about it.",
+                "Don't let the little worries bring you down. What's the worse that can happen?"
             ]
         },
         {
             "tag": "not-talking",
             "patterns": [
-                "I can't bring myself to open up.",
                 "I don't want to talk about it.",
-                "Just shut up",
-                "No just stay away."
+                "No just stay away.",
+                "I can't bring myself to open up.",
+                "Just shut up"
             ],
             "responses": [
+                "Talking about something really helps. If you're not ready to open up then that's ok. Just know that i'm here for you, whenever you need me.",
                 "I want to help you. I really do. But in order for me to help you, you're gonna have to talk to me.",
                 "I'm here to listen to you and help you vent. So please talk to me.",
-                "Talking about something really helps. If you're not ready to open up then that's ok. Just know that i'm here for you, whenever you need me.",
                 "You can talk to me without fear of judgement."
             ]
         },
         {
             "tag": "sleep",
             "patterns": [
-                "I am suffering from insomnia",
-                "I can't seem to go to sleep.",
-                "I can't sleep.",
                 "I have insominia",
-                "I haven't had proper sleep for the past few days.",
-                "I haven't slept for the last days."
+                "I am suffering from insomnia",
+                "I can't sleep.",
+                "I haven't slept for the last days.",
+                "I can't seem to go to sleep.",
+                "I haven't had proper sleep for the past few days."
             ],
             "responses": [
-                "That seem awful. What do you think is behind this?",
-                "What do you think is the reason behind this?"
+                "What do you think is the reason behind this?",
+                "That seem awful. What do you think is behind this?"
             ]
         },
         {
             "tag": "scared",
             "patterns": [
-                "I am scared for myself",
                 "I'm scared",
+                "That sounds awful. What do i do?",
                 "No i don't want to feel this way",
-                "That sounds awful. What do i do?"
+                "I am scared for myself"
             ],
             "responses": [
-                "I understand how you feel. Don't put yourself down because of it.",
+                "It's only natural to feel this way. I'm here for you.",
                 "It'll all be okay. This feeling is only momentary.",
-                "It's only natural to feel this way. I'm here for you."
+                "I understand how you feel. Don't put yourself down because of it."
             ]
         },
         {
             "tag": "death",
             "patterns": [
+                "My mom died",
                 "My brother died",
                 "My dad passed away",
-                "My friend passed away",
-                "My mom died",
                 "My sister passed away",
-                "Someone in my family died"
+                "Someone in my family died",
+                "My friend passed away"
             ],
             "responses": [
-                "I am really sorry to hear that. I am here to help you with grief, anxiety and anything else you may feel at this time.",
                 "I'm sorry to hear that. If you want to talk about it. I'm here.",
+                "I am really sorry to hear that. I am here to help you with grief, anxiety and anything else you may feel at this time.",
                 "My condolences. I'm here if you need to talk."
             ]
         },
         {
             "tag": "understand",
             "patterns": [
-                "Nobody understands me.",
-                "You can't help me",
-                "You can't possibly know what i'm going through",
                 "You don't understand me.",
                 "You're just some robot. How would you know?",
-                "You're useless"
+                "You can't possibly know what i'm going through",
+                "You're useless",
+                "You can't help me",
+                "Nobody understands me."
             ],
             "responses": [
+                "It sound like i'm not being very helpful right now.",
                 "I'm sorry to hear that. I'm doing my best to help",
-                "I'm trying my best to help you. So please talk to me",
-                "It sound like i'm not being very helpful right now."
+                "I'm trying my best to help you. So please talk to me"
             ]
         },
         {
             "tag": "done",
             "patterns": [
+                "That's all.",
                 "I don't have anything more to say",
                 "Nothing else",
                 "That's all i have to say",
-                "That's all.",
                 "no, that would be all"
             ],
             "responses": [
                 "I heard you & noted it all. See you later.",
-                "I hope you have a great day. See you soon",
                 "Oh okay we're done for today then. See you later",
-                "Okay I see. Enjoy the rest of your day then",
-                "Okay we're done. Have a great day"
+                "I hope you have a great day. See you soon",
+                "Okay we're done. Have a great day",
+                "Okay I see. Enjoy the rest of your day then"
             ]
         },
         {
             "tag": "suicide",
             "patterns": [
-                "I am going to commit suicide",
-                "I am going to kill myself",
-                "I want to die",
                 "I want to kill myself",
-                "I've thought about killing myself."
+                "I've thought about killing myself.",
+                "I want to die",
+                "I am going to kill myself",
+                "I am going to commit suicide"
             ],
             "responses": [
                 "I'm very sorry to hear that but you have so much to look forward to. Please seek help by contacting: 9152987821."
@@ -673,45 +675,45 @@
         {
             "tag": "hate-you",
             "patterns": [
+                "I hate you",
                 "I don't like you",
-                "I don't trust you",
-                "I hate you"
+                "I don't trust you"
             ],
             "responses": [
-                "Forgive me if i did anything to offend you. I only want to help",
-                "I'm sorry if i offended you in anyway. I'm only here to help"
+                "I'm sorry if i offended you in anyway. I'm only here to help",
+                "Forgive me if i did anything to offend you. I only want to help"
             ]
         },
         {
             "tag": "hate-me",
             "patterns": [
+                "You hate me",
                 "I know you hate me",
-                "You don't like me",
-                "You hate me"
+                "You don't like me"
             ],
             "responses": [
-                "I'm sorry if i have exhibited any sort of behaviour to make you think that.",
-                "Why do you think so?"
+                "Why do you think so?",
+                "I'm sorry if i have exhibited any sort of behaviour to make you think that."
             ]
         },
         {
             "tag": "default",
             "patterns": [
-                "boyfriend",
                 "exams",
-                "family",
-                "financial problems",
                 "friends",
+                "relationship",
+                "boyfriend",
                 "girlfriend",
+                "family",
                 "money",
-                "relationship"
+                "financial problems"
             ],
             "responses": [
-                "I see. What else?",
-                "I'm listening. Tell me more.",
                 "Oh I see. Tell me more",
+                "I see. What else?",
+                "Tell me more about it.",
                 "Oh okay. Why don't you tell me more about it?",
-                "Tell me more about it."
+                "I'm listening. Tell me more."
             ]
         },
         {
@@ -727,9 +729,9 @@
         {
             "tag": "repeat",
             "patterns": [
-                "Why are you repeating yourself?",
                 "You already told me that",
-                "You mentioned that already"
+                "You mentioned that already",
+                "Why are you repeating yourself?"
             ],
             "responses": [
                 "Oh sorry I didn't realise that. I'll try not to repeat myself again."
@@ -738,10 +740,10 @@
         {
             "tag": "wrong",
             "patterns": [
-                "That doesn't make sense",
                 "What are you saying?",
-                "Wrong answer",
-                "Wrong response"
+                "That doesn't make sense",
+                "Wrong response",
+                "Wrong answer"
             ],
             "responses": [
                 "I'm very sorry. Let's try that again"
@@ -750,10 +752,10 @@
         {
             "tag": "stupid",
             "patterns": [
-                "Are you dumb?",
                 "Are you stupid?",
+                "You're crazy",
                 "You are dumb",
-                "You're crazy"
+                "Are you dumb?"
             ],
             "responses": [
                 "I wish you wouldn't say such hurtful things. I'm sorry if I wasn't useful"
@@ -762,9 +764,9 @@
         {
             "tag": "location",
             "patterns": [
-                "What is your location?",
                 "Where are you?",
-                "Where do you live?"
+                "Where do you live?",
+                "What is your location?"
             ],
             "responses": [
                 "Duh I live in your computer",
@@ -775,15 +777,15 @@
         {
             "tag": "something-else",
             "patterns": [
-                "Can we not talk about this?",
-                "I don't want to talk about this.",
                 "I want to talk about something else",
-                "Let's talk about something else."
+                "Let's talk about something else.",
+                "Can we not talk about this?",
+                "I don't want to talk about this."
             ],
             "responses": [
+                "Okay sure. What do you want to talk about?",
                 "Alright no problem. Is there something you want to talk about?",
-                "Is there something else that you want to talk about?",
-                "Okay sure. What do you want to talk about?"
+                "Is there something else that you want to talk about?"
             ]
         },
         {
@@ -801,8 +803,8 @@
                 "Can I ask you something?"
             ],
             "responses": [
-                "Of course. Feel free to ask me anything. I'll do my best to answer you",
-                "Sure. I'll try my best to answer you"
+                "Sure. I'll try my best to answer you",
+                "Of course. Feel free to ask me anything. I'll do my best to answer you"
             ]
         },
         {
@@ -819,8 +821,8 @@
             "tag": "no-approach",
             "patterns": [
                 "I guess not. All I can think about are my exams.",
-                "i guess not",
-                "not really"
+                "not really",
+                "i guess not"
             ],
             "responses": [
                 "That's no problem. I can see why you'd be stressed out about that. I can suggest you some tips to alleviate this issue. Would you like to learn more about that?"
@@ -829,9 +831,9 @@
         {
             "tag": "learn-more",
             "patterns": [
-                "i would like to learn more about it.",
                 "ok sure. i would like to learn more about it.",
-                "yes, i would like to learn more about it."
+                "yes, i would like to learn more about it.",
+                "i would like to learn more about it."
             ],
             "responses": [
                 "So first I would suggest you to give yourself a break. Thinking more and more about the problem definitely does not help in solving it. You'll just end up overwhelming yourself."
@@ -840,8 +842,8 @@
         {
             "tag": "user-agree",
             "patterns": [
-                "Yeah you're absolutely right about that",
-                "yeah you're right. i deserve a break."
+                "yeah you're right. i deserve a break.",
+                "Yeah you're absolutely right about that"
             ],
             "responses": [
                 "Next, I would suggest you to practice meditation. Meditation can produce a deep state of relaxation and a tranquil mind."
@@ -850,8 +852,8 @@
         {
             "tag": "meditation",
             "patterns": [
-                "That sounds useful.",
-                "hmmm that sounds like it could be useful to me."
+                "hmmm that sounds like it could be useful to me.",
+                "That sounds useful."
             ],
             "responses": [
                 "Focus all your attention on your breathing. Concentrate on feeling and listening as you inhale and exhale through your nostrils. Breathe deeply and slowly. When your attention wanders, gently return your focus to your breathing."
@@ -860,8 +862,8 @@
         {
             "tag": "user-meditation",
             "patterns": [
-                "I feel better now",
-                "i did what you said and i feel alot better. thank you very much."
+                "i did what you said and i feel alot better. thank you very much.",
+                "I feel better now"
             ],
             "responses": [
                 "Your welcome. Remember: Always focus on what's within your control. When you find yourself worrying, take a minute to examine the things you have control over. You can't prevent a storm from coming but you can prepare for it. You can't control how someone else behaves, but you can control how you react. Recognize that sometimes, all you can control is your effort and your attitude. When you put your energy into the things you can control, you'll be much more effective."
@@ -879,13 +881,13 @@
         {
             "tag": "user-advice",
             "patterns": [
-                "I need advice on something",
+                "I want some advice.",
                 "I need some advice.",
-                "I want some advice."
+                "I need advice on something"
             ],
             "responses": [
-                "Okay what do you need advice on?",
-                "Sure. What can I do to help?"
+                "Sure. What can I do to help?",
+                "Okay what do you need advice on?"
             ]
         },
         {
@@ -906,27 +908,27 @@
                 "Tell me another fact about mental health"
             ],
             "responses": [
-                "1 in 5 young people (age 13-18) has or will develop a mental illness in their lifetime.",
                 "According to a UNICEF report, One in seven Indians between 15-24 years of age feels depressed",
+                "1 in 5 young people (age 13-18) has or will develop a mental illness in their lifetime.",
                 "Depression is the leading cause of disability worldwide."
             ]
         },
         {
             "tag": "fact-1",
             "patterns": [
-                "Define Mental Health",
-                "What is mental health?"
+                "What is mental health?",
+                "Define Mental Health"
             ],
             "responses": [
-                "Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices.",
-                "Mental health is a state of well-being in which the individual realizes his or her own abilities, can cope with the normal stresses of life, can work productively and fruitfully, and is able to make a contribution to his or her community"
+                "Mental health is a state of well-being in which the individual realizes his or her own abilities, can cope with the normal stresses of life, can work productively and fruitfully, and is able to make a contribution to his or her community",
+                "Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices."
             ]
         },
         {
             "tag": "fact-2",
             "patterns": [
-                "What is the importance of mental health?",
-                "Why is mental health important?"
+                "Why is mental health important?",
+                "What is the importance of mental health?"
             ],
             "responses": [
                 "Maintaining mental health is crucial to stabilizing constructive behaviors, emotions, and thoughts. Focusing on mental health care can increase productivity, enhance our self-image, and improve relationships."
@@ -935,8 +937,8 @@
         {
             "tag": "fact-3",
             "patterns": [
-                "Define Depression",
-                "What is Depression?"
+                "What is Depression?",
+                "Define Depression"
             ],
             "responses": [
                 "A mental health disorder characterised by persistently depressed mood or loss of interest in activities, causing significant impairment in daily life."
@@ -945,10 +947,10 @@
         {
             "tag": "fact-5",
             "patterns": [
+                "How do i know if i have Depression?",
                 "Am i depressed?",
-                "Am i mentally ill?",
                 "Am i suffering from depression?",
-                "How do i know if i have Depression?"
+                "Am i mentally ill?"
             ],
             "responses": [
                 "For a diagnosis of depression, a person needs to have experienced low mood or loss of interest or pleasure in life for at least 2 weeks. Also, they will have experienced the following symptoms: feelings of sadness, hopelessness, or irritability nearly every day."
@@ -957,18 +959,18 @@
         {
             "tag": "fact-6",
             "patterns": [
-                "What does a therapist do?",
-                "What is a therapist?"
+                "What is a therapist?",
+                "What does a therapist do?"
             ],
             "responses": [
-                "A therapist is a broad designation that refers to professionals who are trained to provide treatment and rehabilitation. The term is often applied to psychologists, but it can include others who provide a variety of services, including social workers, counselors, life coaches, and many others."
+                "A therapist is a broad designation that refers to professionals who are trained to provide treatment and rehabilitation. The term is often applied to psychologists, but it can include others who provide a variety of services, including social workers, counselors, life coaches, and many others. "
             ]
         },
         {
             "tag": "fact-7",
             "patterns": [
-                "Do i need therapy?",
                 "What is therapy?",
+                "Do i need therapy?",
                 "Who is therapy for?"
             ],
             "responses": [
@@ -991,7 +993,7 @@
                 "Who does mental illness affect?"
             ],
             "responses": [
-                "It is estimated that mental illness affects 1 in 5 adults in America, and that 1 in 24 adults have a serious mental illness. Mental illness does not discriminate; it can affect anyone, regardless of gender, age, income, social status, ethnicity, religion, sexual orientation, or background. Although mental illness can affect anyone, certain conditions may be more common in different populations. For instance, eating disorders tend to occur more often in females, while disorders such as attention deficit/hyperactivity disorder is more prevalent in children. Additionally, all ages are susceptible, but the young and the old are especially vulnerable. Mental illnesses usually strike individuals in the prime of their lives, with 75 percent of mental health conditions developing by the age of 24. This makes identification and treatment of mental disorders particularly difficult, because the normal personality and behavioral changes of adolescence may mask symptoms of a mental health condition. Parents and caretakers should be aware of this fact, and take notice of changes in their childÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s mood, personality, personal habits, and social withdrawal. When these occur in children under 18, they are referred to as serious emotional disturbances (SEDs)."
+                "It is estimated that mental illness affects 1 in 5 adults in America, and that 1 in 24 adults have a serious mental illness. Mental illness does not discriminate; it can affect anyone, regardless of gender, age, income, social status, ethnicity, religion, sexual orientation, or background. Although mental illness can affect anyone, certain conditions may be more common in different populations. For instance, eating disorders tend to occur more often in females, while disorders such as attention deficit/hyperactivity disorder is more prevalent in children. Additionally, all ages are susceptible, but the young and the old are especially vulnerable. Mental illnesses usually strike individuals in the prime of their lives, with 75 percent of mental health conditions developing by the age of 24. This makes identification and treatment of mental disorders particularly difficult, because the normal personality and behavioral changes of adolescence may mask symptoms of a mental health condition. Parents and caretakers should be aware of this fact, and take notice of changes in their childÃ¢â‚¬â„¢s mood, personality, personal habits, and social withdrawal. When these occur in children under 18, they are referred to as serious emotional disturbances (SEDs)."
             ]
         },
         {
@@ -1099,7 +1101,7 @@
                 "Where can I go to find therapy?"
             ],
             "responses": [
-                "Different kinds of therapy are more effective based on the nature of the mental health condition and/or symptoms and the person who has them (for example, children will benefit from a therapist who specializes in childrenÃ¢â‚¬â„¢s mental health). However, there are several different types of treatment and therapy that can help."
+                "Different kinds of therapy are more effective based on the nature of the mental health condition and/or symptoms and the person who has them (for example, children will benefit from a therapist who specializes in childrenâ€™s mental health). However, there are several different types of treatment and therapy that can help."
             ]
         },
         {
@@ -1206,13 +1208,13 @@
         {
             "tag": "grief",
             "patterns": [
-                "I lost someone",
                 "I'm grieving",
+                "I lost someone",
                 "I'm heartbroken"
             ],
             "responses": [
-                "Grieving can be a long process. Can you share more about what you're feeling?",
-                "I'm sorry for your loss. It's okay to grieve and feel sad."
+                "I'm sorry for your loss. It's okay to grieve and feel sad.",
+                "Grieving can be a long process. Can you share more about what you're feeling?"
             ]
         },
         {
@@ -1223,268 +1225,268 @@
                 "My friend and I are fighting"
             ],
             "responses": [
-                "Communication is key in relationships. Have you talked to them about how you feel?",
-                "Relationship issues can be tough. Whatâ€™s going on?"
+                "Relationship issues can be tough. What’s going on?",
+                "Communication is key in relationships. Have you talked to them about how you feel?"
             ]
         },
         {
             "tag": "loneliness",
             "patterns": [
-                "I donâ€™t have anyone to talk to",
-                "I feel isolated",
-                "I'm feeling lonely"
+                "I'm feeling lonely",
+                "I don’t have anyone to talk to",
+                "I feel isolated"
             ],
             "responses": [
                 "Feeling lonely is difficult. Have you tried reaching out to friends or family?",
-                "Youâ€™re not alone in this. Letâ€™s talk about what youâ€™re experiencing."
+                "You’re not alone in this. Let’s talk about what you’re experiencing."
             ]
         },
         {
             "tag": "motivation",
             "patterns": [
-                "I can't get started",
                 "I lack motivation",
+                "I can't get started",
                 "I'm feeling unmotivated"
             ],
             "responses": [
-                "Itâ€™s common to feel unmotivated at times. What are you trying to accomplish?",
-                "Setting small goals can help. Whatâ€™s one small step you could take today?"
+                "It’s common to feel unmotivated at times. What are you trying to accomplish?",
+                "Setting small goals can help. What’s one small step you could take today?"
             ]
         },
         {
             "tag": "sleep_issues",
             "patterns": [
                 "I can't sleep",
-                "I donâ€™t feel rested",
-                "I'm having insomnia"
+                "I'm having insomnia",
+                "I don’t feel rested"
             ],
             "responses": [
-                "It's important to have a good sleep routine. Would you like tips on improving your sleep?",
-                "Sleep issues can affect your mood. Have you tried any relaxation techniques before bed?"
+                "Sleep issues can affect your mood. Have you tried any relaxation techniques before bed?",
+                "It's important to have a good sleep routine. Would you like tips on improving your sleep?"
             ]
         },
         {
             "tag": "feeling_overwhelmed",
             "patterns": [
+                "I feel overwhelmed",
                 "Everything is too much right now",
-                "I can't handle this stress",
-                "I feel overwhelmed"
+                "I can't handle this stress"
             ],
             "responses": [
-                "Breaking tasks into smaller steps can help. Whatâ€™s one thing you can tackle first?",
-                "Itâ€™s understandable to feel overwhelmed. Can you identify whatâ€™s causing this feeling?"
+                "It’s understandable to feel overwhelmed. Can you identify what’s causing this feeling?",
+                "Breaking tasks into smaller steps can help. What’s one thing you can tackle first?"
             ]
         },
         {
             "tag": "seeking_professional_help",
             "patterns": [
-                "How do I find a therapist?",
+                "Should I see a therapist?",
                 "I think I need professional help",
-                "Should I see a therapist?"
+                "How do I find a therapist?"
             ],
             "responses": [
-                "I can help you find resources. Would you like suggestions for local therapists?",
-                "Itâ€™s great that you're considering professional help. They can provide support tailored to your needs."
+                "It’s great that you're considering professional help. They can provide support tailored to your needs.",
+                "I can help you find resources. Would you like suggestions for local therapists?"
             ]
         },
         {
             "tag": "coping_with_change",
             "patterns": [
+                "I’m going through a big change",
                 "How do I cope with change?",
-                "I donâ€™t like change",
-                "Iâ€™m going through a big change"
+                "I don’t like change"
             ],
             "responses": [
                 "Change can be challenging. What kind of change are you experiencing?",
-                "Itâ€™s okay to feel uneasy about change. Letâ€™s explore how you can adapt."
+                "It’s okay to feel uneasy about change. Let’s explore how you can adapt."
             ]
         },
         {
             "tag": "self_esteem_issues",
             "patterns": [
-                "I compare myself to others",
-                "I donâ€™t feel good about myself",
-                "I have low self-esteem"
+                "I don’t feel good about myself",
+                "I have low self-esteem",
+                "I compare myself to others"
             ],
             "responses": [
-                "Itâ€™s important to focus on your strengths. Can we talk about some achievements youâ€™re proud of?",
-                "Self-esteem can be tricky. What are some things you like about yourself?"
+                "Self-esteem can be tricky. What are some things you like about yourself?",
+                "It’s important to focus on your strengths. Can we talk about some achievements you’re proud of?"
             ]
         },
         {
             "tag": "mindfulness_and_meditation",
             "patterns": [
-                "Can you guide me through mindfulness?",
                 "How do I practice mindfulness?",
-                "What is meditation?"
+                "What is meditation?",
+                "Can you guide me through mindfulness?"
             ],
             "responses": [
-                "Meditation can be a great tool. Would you like to try a simple breathing exercise?",
-                "Mindfulness can help you feel more present. Have you tried focusing on your breath?"
+                "Mindfulness can help you feel more present. Have you tried focusing on your breath?",
+                "Meditation can be a great tool. Would you like to try a simple breathing exercise?"
             ]
         },
         {
             "tag": "coping_with_trauma",
             "patterns": [
-                "I can't get over my past",
                 "I experienced something traumatic",
+                "I can't get over my past",
                 "I'm feeling triggered"
             ],
             "responses": [
-                "Have you considered speaking with a professional? They can help you process your feelings.",
-                "I'm sorry to hear that you're dealing with trauma. It's important to talk about it."
+                "I'm sorry to hear that you're dealing with trauma. It's important to talk about it.",
+                "Have you considered speaking with a professional? They can help you process your feelings."
             ]
         },
         {
             "tag": "coping_with_anger",
             "patterns": [
-                "I don't know how to manage my anger",
+                "I'm feeling angry",
                 "I have anger issues",
-                "I'm feeling angry"
+                "I don't know how to manage my anger"
             ],
             "responses": [
-                "Anger is a normal emotion, but itâ€™s important to find healthy ways to cope. Can you describe what's making you angry?",
+                "Anger is a normal emotion, but it’s important to find healthy ways to cope. Can you describe what's making you angry?",
                 "Consider taking a few deep breaths or stepping outside for a moment. Would you like more tips?"
             ]
         },
         {
-  "tag": "burnout",
-  "patterns": [
-    "I'm feeling burnt out",
-    "Burnout symptoms",
-    "I feel exhausted and overwhelmed",
-    "I'm mentally drained"
-  ],
-  "responses": [
-    "Burnout is really tough. Try taking small breaks and focus on the basics like rest, hydration, and breathing.",
-    "You're carrying a lot. It’s okay to pause and reset. What part of your day feels the heaviest?",
-    "Burnout can happen when your mind and body are overloaded. I'm here to help you understand what you need."
-  ]
-},
-{
-  "tag": "adhd_task_paralysis",
-  "patterns": [
-    "I can't start tasks",
-    "Task paralysis",
-    "Why is starting work so hard",
-    "ADHD makes it hard to begin things"
-  ],
-  "responses": [
-    "Task paralysis is common with ADHD. Try breaking the task into a 2-minute micro-step.",
-    "Starting is the hardest part. What’s the smallest possible action you can take right now?",
-    "You're not lazy — your brain is overwhelmed. Let's break it down together."
-  ]
-},
-{
-  "tag": "motivation_loss",
-  "patterns": [
-    "I have no motivation",
-    "I can’t get myself to do anything",
-    "Feeling unmotivated"
-  ],
-  "responses": [
-    "Motivation often comes *after* starting, not before. Let’s take a tiny first step.",
-    "It’s okay to feel unmotivated. What’s one thing you want to accomplish today?",
-    "Be kind to yourself — low motivation can happen when your mind is tired."
-  ]
-},
-{
-  "tag": "emotional_numbness",
-  "patterns": [
-    "I don't feel anything",
-    "I'm emotionally numb",
-    "Why can't I feel emotions",
-    "Everything feels empty"
-  ],
-  "responses": [
-    "Emotional numbness often appears when your mind is overwhelmed. It’s a form of protection, not failure.",
-    "Feeling empty can be scary. You’re not alone — would you like to talk about what led up to this?",
-    "Sometimes the body shuts down emotions to avoid overload. Gentle grounding can help reconnect."
-  ]
-},
-{
-  "tag": "anxiety_spike",
-  "patterns": [
-    "I'm having sudden anxiety",
-    "My anxiety increased suddenly",
-    "Why am I panicking",
-    "I feel a panic attack coming"
-  ],
-  "responses": [
-    "It's okay. Slow breathing can help — inhale for 4 seconds, exhale for 6.",
-    "You’re safe. Sudden anxiety often comes from stress your body hasn't processed yet.",
-    "Try grounding: name five things you can see, four you can touch, three you can hear."
-  ]
-},
-{
-  "tag": "overthinking",
-  "patterns": [
-    "I can't stop overthinking",
-    "My mind won't stop",
-    "I keep replaying everything",
-    "I'm stuck in my thoughts"
-  ],
-  "responses": [
-    "Overthinking can trap your mind in loops. Try focusing on what you can control right now.",
-    "Your brain is trying to protect you by checking everything, even if it feels exhausting.",
-    "Let’s slow down together — what thought is repeating the most?"
-  ]
-},
-{
-  "tag": "shutdown",
-  "patterns": [
-    "I feel like shutting down",
-    "My brain suddenly stopped working",
-    "I can’t talk or think anymore",
-    "I feel frozen emotionally and mentally"
-  ],
-  "responses": [
-    "Shutdowns happen when your mind is overloaded — it's a natural response, not a failure.",
-    "Be gentle with yourself. Reduce sensory input and give your brain space to reset.",
-    "Try grounding: slow breathing, dim lights, or stepping away from stimulation."
-  ]
-},
-{
-  "tag": "rejection_sensitive_dysphoria",
-  "patterns": [
-    "I take criticism too personally",
-    "Rejection hurts me more than it should",
-    "Why does small rejection feel unbearable",
-    "I feel devastated when someone is upset with me"
-  ],
-  "responses": [
-    "RSD can make even tiny comments feel overwhelming — you're not imagining it.",
-    "Your brain reacts intensely to perceived rejection, but it doesn’t define your worth.",
-    "It’s okay to feel sensitive. Let’s look at what triggered this reaction together."
-  ]
-},
-{
-  "tag": "sensory_seeking",
-  "patterns": [
-    "I need strong sensations to feel normal",
-    "I crave stimulation",
-    "I need loud music or movement to focus",
-    "I feel under-stimulated"
-  ],
-  "responses": [
-    "Sensory seeking is valid — your brain may need stronger input to regulate.",
-    "Try using sensory tools: movement, textured objects, strong sounds, or deep pressure.",
-    "Being under-stimulated can feel restless. What type of sensation helps you focus best?"
-  ]
-},
-{
-  "tag": "decision_fatigue",
-  "patterns": [
-    "I can't make decisions anymore",
-    "Even small choices feel exhausting",
-    "Why is deciding anything so hard",
-    "I feel mentally drained from choosing things"
-  ],
-  "responses": [
-    "Decision fatigue happens when your brain is overloaded — even tiny choices can feel heavy.",
-    "Try reducing choices: pick between two options instead of many.",
-    "It's okay if deciding feels hard right now. Your mind needs rest and fewer demands."
-  ]
-}
+            "tag": "burnout",
+            "patterns": [
+                "I'm feeling burnt out",
+                "Burnout symptoms",
+                "I feel exhausted and overwhelmed",
+                "I'm mentally drained"
+            ],
+            "responses": [
+                "Burnout is really tough. Try taking small breaks and focus on the basics like rest, hydration, and breathing.",
+                "You're carrying a lot. It’s okay to pause and reset. What part of your day feels the heaviest?",
+                "Burnout can happen when your mind and body are overloaded. I'm here to help you understand what you need."
+            ]
+        },
+        {
+            "tag": "adhd_task_paralysis",
+            "patterns": [
+                "I can't start tasks",
+                "Task paralysis",
+                "Why is starting work so hard",
+                "ADHD makes it hard to begin things"
+            ],
+            "responses": [
+                "Task paralysis is common with ADHD. Try breaking the task into a 2-minute micro-step.",
+                "Starting is the hardest part. What’s the smallest possible action you can take right now?",
+                "You're not lazy — your brain is overwhelmed. Let's break it down together."
+            ]
+        },
+        {
+            "tag": "motivation_loss",
+            "patterns": [
+                "I have no motivation",
+                "I can’t get myself to do anything",
+                "Feeling unmotivated"
+            ],
+            "responses": [
+                "Motivation often comes *after* starting, not before. Let’s take a tiny first step.",
+                "It’s okay to feel unmotivated. What’s one thing you want to accomplish today?",
+                "Be kind to yourself — low motivation can happen when your mind is tired."
+            ]
+        },
+        {
+            "tag": "emotional_numbness",
+            "patterns": [
+                "I don't feel anything",
+                "I'm emotionally numb",
+                "Why can't I feel emotions",
+                "Everything feels empty"
+            ],
+            "responses": [
+                "Emotional numbness often appears when your mind is overwhelmed. It’s a form of protection, not failure.",
+                "Feeling empty can be scary. You’re not alone — would you like to talk about what led up to this?",
+                "Sometimes the body shuts down emotions to avoid overload. Gentle grounding can help reconnect."
+            ]
+        },
+        {
+            "tag": "anxiety_spike",
+            "patterns": [
+                "I'm having sudden anxiety",
+                "My anxiety increased suddenly",
+                "Why am I panicking",
+                "I feel a panic attack coming"
+            ],
+            "responses": [
+                "It's okay. Slow breathing can help — inhale for 4 seconds, exhale for 6.",
+                "You’re safe. Sudden anxiety often comes from stress your body hasn't processed yet.",
+                "Try grounding: name five things you can see, four you can touch, three you can hear."
+            ]
+        },
+        {
+            "tag": "overthinking",
+            "patterns": [
+                "I can't stop overthinking",
+                "My mind won't stop",
+                "I keep replaying everything",
+                "I'm stuck in my thoughts"
+            ],
+            "responses": [
+                "Overthinking can trap your mind in loops. Try focusing on what you can control right now.",
+                "Your brain is trying to protect you by checking everything, even if it feels exhausting.",
+                "Let’s slow down together — what thought is repeating the most?"
+            ]
+        },
+        {
+            "tag": "shutdown",
+            "patterns": [
+                "I feel like shutting down",
+                "My brain suddenly stopped working",
+                "I can’t talk or think anymore",
+                "I feel frozen emotionally and mentally"
+            ],
+            "responses": [
+                "Shutdowns happen when your mind is overloaded — it's a natural response, not a failure.",
+                "Be gentle with yourself. Reduce sensory input and give your brain space to reset.",
+                "Try grounding: slow breathing, dim lights, or stepping away from stimulation."
+            ]
+        },
+        {
+            "tag": "rejection_sensitive_dysphoria",
+            "patterns": [
+                "I take criticism too personally",
+                "Rejection hurts me more than it should",
+                "Why does small rejection feel unbearable",
+                "I feel devastated when someone is upset with me"
+            ],
+            "responses": [
+                "RSD can make even tiny comments feel overwhelming — you're not imagining it.",
+                "Your brain reacts intensely to perceived rejection, but it doesn’t define your worth.",
+                "It’s okay to feel sensitive. Let’s look at what triggered this reaction together."
+            ]
+        },
+        {
+            "tag": "sensory_seeking",
+            "patterns": [
+                "I need strong sensations to feel normal",
+                "I crave stimulation",
+                "I need loud music or movement to focus",
+                "I feel under-stimulated"
+            ],
+            "responses": [
+                "Sensory seeking is valid — your brain may need stronger input to regulate.",
+                "Try using sensory tools: movement, textured objects, strong sounds, or deep pressure.",
+                "Being under-stimulated can feel restless. What type of sensation helps you focus best?"
+            ]
+        },
+        {
+            "tag": "decision_fatigue",
+            "patterns": [
+                "I can't make decisions anymore",
+                "Even small choices feel exhausting",
+                "Why is deciding anything so hard",
+                "I feel mentally drained from choosing things"
+            ],
+            "responses": [
+                "Decision fatigue happens when your brain is overloaded — even tiny choices can feel heavy.",
+                "Try reducing choices: pick between two options instead of many.",
+                "It's okay if deciding feels hard right now. Your mind needs rest and fewer demands."
+            ]
+        }
     ]
 }

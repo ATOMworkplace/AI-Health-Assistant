@@ -2,10 +2,13 @@ import json
 import random
 import pickle
 import re
+import os
 import numpy as np
-from tensorflow.keras.models import Sequential
+from tensorflow.keras.models import Sequential, load_model
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import SGD
+
+MODEL_PATH = "model.h5"
 
 def simple_tokenize(text):
     return re.findall(r'\w+', text.lower())
@@ -62,16 +65,33 @@ def build_model(input_len, output_len):
 
 def main():
     try:
+        # --------------------------------------------
+        # LOAD SAVED MODEL IF AVAILABLE
+        # --------------------------------------------
+        if os.path.exists(MODEL_PATH):
+            print("➡ Loading existing model.h5 ...")
+            model = load_model(MODEL_PATH)
+            print("✔ Model loaded — skipping training.")
+            return  # Nothing else needed
+
+        # --------------------------------------------
+        # NO MODEL FOUND → TRAIN NEW MODEL
+        # --------------------------------------------
+        print("❌ No existing model found — training new model...")
+
         intents = load_intents()
         words, classes, train_x, train_y = prepare_data(intents)
 
         model = build_model(len(train_x[0]), len(train_y[0]))
         model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=0)
 
-        model.save("model.h5")
+        # Save model and data
+        model.save(MODEL_PATH)
         pickle.dump(words, open("words.pkl", "wb"))
         pickle.dump(classes, open("classes.pkl", "wb"))
-        print("Training successful")
+
+        print("✔ Training successful — model saved as model.h5")
+
     except Exception as e:
         print(f"Training failed: {e}")
 
