@@ -167,6 +167,8 @@ def get_response(intents_list, intents_json):
 async def handle_message_async(prompt, model, words, classes, data):
     """Async wrapper for prediction and response generation."""
     intents = predict_class(prompt, model, words, classes)
+    # Add a small artificial delay so the typing animation is visible
+    await asyncio.sleep(0.8) 
     return get_response(intents, data)
 
 # ----------------------------------------------------------------
@@ -219,32 +221,65 @@ def initialize_model_and_data():
 
 def apply_complete_theme(theme_mode):
     """Apply comprehensive theme styling for Light and Dark modes."""
+    
+    # Common CSS for typing animation
+    typing_css = """
+    /* Typing Indicator Animation */
+    .typing-indicator {
+        display: inline-block;
+        padding: 8px 0;
+    }
+    .typing-indicator span {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        animation: typing 1.4s infinite ease-in-out both;
+        margin-right: 4px;
+    }
+    .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+    .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+    
+    @keyframes typing {
+        0%, 80%, 100% { transform: scale(0); opacity: 0.5; }
+        40% { transform: scale(1); opacity: 1; }
+    }
+    """
+
     if theme_mode == "Light":
-        return """
+        return f"""
         <style>
-        body { background-color: #f2f8fd; }
-        .title-box { background-color: #e0f0ff; padding: 1.5rem; border-radius: 20px; text-align: center; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .chat-message { padding: 1rem; margin-bottom: 0.8rem; border-radius: 12px; color: black; }
-        .user { background-color: #D0E8FF; text-align: right; }
-        .assistant { background-color: #E6E6FA; }
-        .stButton>button { border-radius: 10px; font-weight: 600; }
-        .sidebar .stButton>button { background-color: #d6eaff; color: black; }
+        body {{ background-color: #f2f8fd; }}
+        .title-box {{ background-color: #e0f0ff; padding: 1.5rem; border-radius: 20px; text-align: center; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }}
+        .chat-message {{ padding: 1rem; margin-bottom: 0.8rem; border-radius: 12px; color: black; }}
+        .user {{ background-color: #D0E8FF; text-align: right; }}
+        .assistant {{ background-color: #E6E6FA; }}
+        .stButton>button {{ border-radius: 10px; font-weight: 600; }}
+        .sidebar .stButton>button {{ background-color: #d6eaff; color: black; }}
+        
+        /* Typing dots color for Light Mode */
+        .typing-indicator span {{ background-color: #555; }}
+        {typing_css}
         </style>
         """
     else:  # Dark theme
-        return """
+        return f"""
         <style>
-        .stApp { background-color: #1a1d24; color: #ffffff; }
-        [data-testid="stSidebar"] { background-color: #262b35; }
-        h1, h2, h3, h4, p, span, div, label { color: #e0e0e0 !important; }
-        .title-box { background-color: #2d3748; padding: 2rem; border-radius: 15px; text-align: center; margin-bottom: 2rem; border: 1px solid #3d4451; }
-        .stChatMessage { background-color: #2d3748; border-radius: 10px; border: 1px solid #3d4451; }
-        [data-testid="stChatInput"] textarea { background-color: #363b47 !important; color: #ffffff !important; border: 1px solid #4a5060 !important; }
-        .stButton > button { background-color: #363b47; color: #ffffff; border: 1px solid #4a5060; }
-        .stButton > button:hover { background-color: #404552; }
-        ::-webkit-scrollbar { width: 10px; }
-        ::-webkit-scrollbar-track { background: #1a1d24; }
-        ::-webkit-scrollbar-thumb { background: #3d4451; border-radius: 5px; }
+        .stApp {{ background-color: #1a1d24; color: #ffffff; }}
+        [data-testid="stSidebar"] {{ background-color: #262b35; }}
+        h1, h2, h3, h4, p, span, div, label {{ color: #e0e0e0 !important; }}
+        .title-box {{ background-color: #2d3748; padding: 2rem; border-radius: 15px; text-align: center; margin-bottom: 2rem; border: 1px solid #3d4451; }}
+        .stChatMessage {{ background-color: #2d3748; border-radius: 10px; border: 1px solid #3d4451; }}
+        [data-testid="stChatInput"] textarea {{ background-color: #363b47 !important; color: #ffffff !important; border: 1px solid #4a5060 !important; }}
+        .stButton > button {{ background-color: #363b47; color: #ffffff; border: 1px solid #4a5060; }}
+        .stButton > button:hover {{ background-color: #404552; }}
+        ::-webkit-scrollbar {{ width: 10px; }}
+        ::-webkit-scrollbar-track {{ background: #1a1d24; }}
+        ::-webkit-scrollbar-thumb {{ background: #3d4451; border-radius: 5px; }}
+        
+        /* Typing dots color for Dark Mode */
+        .typing-indicator span {{ background-color: #ccc; }}
+        {typing_css}
         </style>
         """
 
@@ -339,11 +374,18 @@ async def main():
         # Generate Assistant Response
         with st.chat_message("assistant"):
             placeholder = st.empty()
-            placeholder.text("Thinking...")
+            
+            # SHOW TYPING ANIMATION instead of "Thinking..."
+            placeholder.markdown("""
+                <div class="typing-indicator">
+                    <span></span><span></span><span></span>
+                </div>
+            """, unsafe_allow_html=True)
             
             # Async prediction
             response = await handle_message_async(prompt, model, words, classes, data)
             
+            # Remove animation and show response
             placeholder.empty()
             placeholder.markdown(response)
             

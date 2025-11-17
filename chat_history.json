@@ -1,5 +1,10 @@
-<<<<<<< HEAD
-[]
-=======
-[]
->>>>>>> fcb7688c3b4742561b85a0c06a2ccc347cefebb8
+[
+    {
+        "role": "user",
+        "content": "Hello"
+    },
+    {
+        "role": "assistant",
+        "content": "Hi there. How are you feeling today?"
+    }
+]
